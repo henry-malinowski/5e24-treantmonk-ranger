@@ -1,0 +1,109 @@
+name: Gloom Stalker
+type: subclass
+folder: 4ZMAZcPYjyR6nhax
+img: modules/dnd-players-handbook/assets/icons/classes/gloom-stalker.webp
+system:
+  description:
+    value: >-
+      <blockquote><p>Draw on Shadow Magic to Fight Your
+      Foes</p></blockquote><p>Gloom Stalkers are at home in the darkest places,
+      wielding magic drawn from the Shadowfell to combat enemies that lurk in
+      darkness.</p>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  identifier: gloom
+  classIdentifier: ranger
+  advancement:
+    - _id: wacj6x75L5ZaZUky
+      type: ItemGrant
+      configuration:
+        items:
+          - uuid: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrSpellsGloom
+            optional: false
+          - uuid: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrUmbralSight
+            optional: false
+          - uuid: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrDreadAmbush
+            optional: false
+        optional: false
+        spell: null
+      value: {}
+      level: 3
+      title: Subclass Features
+    - _id: 4nA7C6uQhBJBtWdS
+      type: ItemGrant
+      configuration:
+        items:
+          - uuid: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrIronMind000
+            optional: false
+        optional: false
+        spell: null
+      value: {}
+      level: 7
+      title: Subclass Features
+    - _id: 1P4RbYyrzFoutFrj
+      type: ItemGrant
+      configuration:
+        items:
+          - uuid: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrShadowyDodg
+            optional: false
+        optional: false
+        spell: null
+      value: {}
+      level: 15
+      title: Subclass Features
+    - _id: xYj1TbCoy8ytnnRt
+      type: Trait
+      configuration:
+        mode: default
+        allowReplacements: true
+        grants: []
+        choices:
+          - count: 1
+            pool:
+              - saves:int
+              - saves:wis
+              - saves:cha
+      value:
+        chosen: []
+      level: 7
+      title: Iron Mind
+      hint: >-
+        You gain proficiency in Wisdom saving throws. If you already have this
+        proficiency, you instead gain proficiency in Intelligence or Charisma
+        saving throws (your choice).
+    - _id: sRmIZzqlys7gz3Ux
+      type: ItemGrant
+      configuration:
+        items:
+          - uuid: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrStalkersFlu
+            optional: false
+        optional: false
+        spell: null
+      value: {}
+      level: 11
+      title: Subclass Features
+      hint: ''
+  spellcasting:
+    progression: none
+    ability: ''
+    preparation:
+      formula: ''
+effects: []
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180031540
+  modifiedTime: 1773952759447
+  lastModifiedBy: dnd5ebuilder0000
+ownership:
+  default: 0
+_id: ttrgrGloomStalke
+sort: 125000
+_key: '!items!ttrgrGloomStalke'

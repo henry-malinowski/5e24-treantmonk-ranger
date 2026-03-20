@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Treantmonk's Ranger Homebrew</title>
+  <meta name="theme-color" content="#0b0a13">
+  <link rel="icon" href="favicon/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/diff.css">
+</head>
+<body>
+
+<!-- ═══════════════════ MAIN ══════════════════════════════════════════════ -->
+<main>
+  <div class="site-intro">
+    {{ intro | safe }}
+  </div>
+
+  <div class="card-grid" id="card-grid">
+    {% for card in cards %}
+    {% if card.id === 'spells' %}
+    <article class="module-card module-card--banner" style="animation-delay: {{ loop.index0 * 0.05 + 0.42 }}s" data-index="{{ loop.index0 }}">
+      <i class="fa-solid fa-diamond card-banner-gem"></i>
+      <div class="card-name">{{ card.name }}</div>
+      {% if card.subtitle %}
+      <div class="card-subtitle">{{ card.subtitle }}</div>
+      {% endif %}
+    </article>
+    {% else %}
+    <article class="module-card" style="animation-delay: {{ loop.index0 * 0.05 + 0.42 }}s" data-index="{{ loop.index0 }}">
+      {% if card.image %}
+      <img src="{{ card.image }}" alt="{{ card.name }}" loading="lazy">
+      {% else %}
+      <div class="card-art-fallback"><i class="fa-solid fa-image"></i></div>
+      {% endif %}
+      <div class="card-dim"></div>
+      <div class="card-overlay">
+        <div class="card-name">{{ card.name }}</div>
+        {% if card.subtitle %}
+        <div class="card-subtitle">{{ card.subtitle }}</div>
+        {% endif %}
+      </div>
+    </article>
+    {% endif %}
+    {% endfor %}
+  </div>
+</main>
+
+<!-- ═══════════════════ MANIFEST ══════════════════════════════════════════ -->
+<section class="manifest-section">
+  <div class="manifest-inner">
+    <div class="manifest-label">
+      <i class="fa-solid fa-cube"></i>
+      Install in Foundry VTT
+    </div>
+    <div class="manifest-block">
+      <input class="manifest-input" id="manifest-input" type="text" readonly spellcheck="false"
+        value="https://github.com/henry-malinowski/5e24-treantmonk-ranger/releases/latest/download/module.json">
+      <button class="manifest-copy-btn" id="manifest-copy-btn">
+        <i class="fa-regular fa-copy"></i>
+        <span>Copy</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FOOTER ════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div>
+    Homebrew by <a href="https://www.youtube.com/@TreantmonksTemple" target="_blank" rel="noopener">Treantmonk</a>
+    — support him on <a href="https://www.patreon.com/Treantmonkstemple" target="_blank" rel="noopener">Patreon</a>.
+  </div>
+  <div>
+    Foundry implementation by <a href="https://github.com/henry-malinowski" target="_blank" rel="noopener">Henry Malinowski</a>.
+    View the <a href="https://github.com/henry-malinowski/5e24-treantmonk-ranger/" target="_blank" rel="noopener">module on GitHub</a>.
+  </div>
+  <i class="fa-solid fa-diamond footer-gem"></i>
+  <div>
+    Not affiliated with Wizards of the Coast or Foundry Gaming, LLC.
+  </div>
+</footer>
+
+<!-- ═══════════════════ MODAL ═════════════════════════════════════════════ -->
+<div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <button class="modal-nav modal-nav-prev" id="modal-nav-prev" aria-label="Previous">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+  <button class="modal-nav modal-nav-next" id="modal-nav-next" aria-label="Next">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+  <div class="modal" id="modal">
+    <div class="modal-close-bar">
+      <label class="diff-toggle" id="diff-toggle" hidden title="Show PHB 2024 text">
+        <span class="diff-toggle-label">PHB</span>
+        <span class="diff-toggle-track">
+          <input type="checkbox" id="diff-toggle-input">
+          <span class="diff-toggle-thumb"></span>
+        </span>
+      </label>
+      <button class="modal-close" id="modal-close" aria-label="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="modal-scroll">
+      <div class="modal-inner">
+        <div class="modal-title-row">
+          <div class="modal-title-group">
+            <h2 class="modal-title" id="modal-title"></h2>
+            <p class="modal-subtitle" id="modal-subtitle" hidden></p>
+          </div>
+          <div class="modal-link-btns" id="modal-link-btns"></div>
+        </div>
+        <div class="modal-hero" id="modal-hero"></div>
+        <div class="modal-body">
+          <div class="modal-description" id="modal-description" hidden></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script id="cards-data" type="application/json">{{ cards | dump | safe }}</script>
+<script id="spells-data" type="application/json">{{ spells | dump | safe }}</script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script type="module" src="scripts/app.js"></script>
+</body>
+</html>

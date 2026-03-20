@@ -1,0 +1,17 @@
+type: Actor
+folder: IK3N0MJ5L0Rkb15a
+name: Primal Companions
+color: null
+sorting: a
+_id: I8HmqT2UG0D35C4D
+description: ''
+sort: 0
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  lastModifiedBy: null
+_key: '!folders!I8HmqT2UG0D35C4D'

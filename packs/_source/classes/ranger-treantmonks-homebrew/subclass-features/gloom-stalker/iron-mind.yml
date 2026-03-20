@@ -1,0 +1,58 @@
+name: Iron Mind
+type: feat
+folder: HQqTHeiSLTtEV8Y6
+img: icons/magic/defensive/barrier-shield-dome-blue-purple.webp
+system:
+  description:
+    value: >-
+      <p>You have honed your ability to resist mind-altering powers. You gain
+      proficiency in Wisdom saving throws. If you already have this proficiency,
+      you instead gain proficiency in Intelligence or Charisma saving throws
+      (your choice).</p><p>Whenever you make a Saving Throw for Intelligence,
+      Wisdom or Charisma and are &amp;Reference[invisible apply=false] as a
+      result of the Hide Action, you gain a bonus to the roll equal to your
+      Wisdom modifier (<strong>currently:</strong> [[lookup
+      @abilities.wis.mod]]).</p><section class="secret"
+      id="secret-5dqxmon9VZi1vCwf"><p><strong>Foundry Note</strong></p><p>When
+      you gain this feature during advancement you will be prompted to choose
+      your Saving Throw. You should select Wisdom unless you are already
+      proficient in it.</p></section>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  uses:
+    max: ''
+    spent: 0
+    recovery: []
+  type:
+    value: class
+    subtype: ''
+  prerequisites:
+    level: 7
+    items: []
+    repeatable: false
+  properties: []
+  requirements: ''
+  activities: {}
+  enchant: {}
+  identifier: iron-mind
+  advancement: []
+  crewed: false
+effects: []
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180295046
+  modifiedTime: 1773180295046
+  lastModifiedBy: dnd5ebuilder0000
+ownership:
+  default: 0
+_id: ttrgrIronMind000
+sort: 150000
+_key: '!items!ttrgrIronMind000'

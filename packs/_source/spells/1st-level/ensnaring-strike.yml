@@ -1,0 +1,238 @@
+name: Ensnaring Strike
+system:
+  description:
+    value: >-
+      <p>The target takes an extra [[/damage 1d6 piercing]] damage from the
+      attack as grasping vines appear on it, and it must succeed on a Strength
+      saving throw or have the &amp;Reference[restrained apply=false] condition
+      until the spell ends. At the end of each of its turns, the Restrained
+      target repeats the save, ending the spell on itself on a
+      success.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The
+      damage increases by 1d6 for each spell slot level above 1.</p>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    book: ''
+    page: ''
+    license: ''
+    revision: 2
+  activation:
+    type: bonus
+    condition: Immediately after hitting a creature with a weapon
+    value: null
+  duration:
+    value: '1'
+    units: minute
+  target:
+    affects:
+      choice: false
+      count: ''
+      type: ''
+    template:
+      units: ft
+      contiguous: false
+      type: ''
+  range:
+    units: self
+    special: ''
+  uses:
+    max: ''
+    recovery: []
+    spent: 0
+  level: 1
+  school: con
+  properties:
+    - vocal
+  materials:
+    value: ''
+    consumed: false
+    cost: 0
+    supply: 0
+  activities:
+    dnd5eactivity000:
+      _id: dnd5eactivity000
+      type: save
+      activation:
+        type: action
+        value: null
+        override: false
+      consumption:
+        targets: []
+        scaling:
+          allowed: false
+          max: ''
+        spellSlot: true
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        override: false
+        concentration: false
+      effects:
+        - _id: tFGMG3cjQTEeAhv2
+          onSave: false
+          level:
+            min: null
+            max: null
+      range:
+        override: false
+        units: self
+      target:
+        prompt: true
+        template:
+          contiguous: false
+          units: ft
+        affects:
+          choice: false
+        override: false
+      damage:
+        onSave: full
+        parts:
+          - number: 1
+            denomination: 6
+            bonus: ''
+            types:
+              - piercing
+            custom:
+              enabled: false
+              formula: ''
+            scaling:
+              mode: whole
+              number: 1
+              formula: ''
+      save:
+        ability:
+          - str
+        dc:
+          calculation: spellcasting
+          formula: ''
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      sort: 0
+      flags: {}
+      visibility:
+        level:
+          min: null
+          max: null
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+      name: Damage & Save
+    epWiOrhzBim6ATpz:
+      type: save
+      name: End of Turn Save
+      _id: epWiOrhzBim6ATpz
+      sort: 0
+      activation:
+        type: ''
+        override: true
+        condition: ''
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: false
+        targets: []
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: true
+      effects: []
+      flags: {}
+      range:
+        units: self
+        override: false
+      target:
+        template:
+          contiguous: false
+          units: ft
+        affects:
+          choice: false
+        override: false
+        prompt: true
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      visibility:
+        level:
+          min: null
+          max: null
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+      damage:
+        onSave: none
+        parts: []
+      save:
+        ability:
+          - str
+        dc:
+          calculation: spellcasting
+          formula: ''
+  identifier: ensnaring-strike
+  method: spell
+  prepared: 0
+type: spell
+img: icons/magic/nature/root-vines-grow-brown.webp
+effects:
+  - name: Ensnared
+    origin: Compendium.dnd-players-handbook.spells.Item.phbsplEnsnaringS
+    duration:
+      rounds: null
+      startTime: null
+      seconds: 60
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    disabled: false
+    flags:
+      dnd5e:
+        riders:
+          statuses: []
+    img: icons/magic/nature/root-vine-entangled-hand.webp
+    _id: tFGMG3cjQTEeAhv2
+    type: base
+    system: {}
+    changes: []
+    description: >-
+      <p><span style="font-family:Signika, sans-serif">The target has the
+      &amp;Reference[restrained apply=false] condition until the spell
+      ends.</span></p><p><span style="font-family:Signika, sans-serif">The
+      target makes a Strength saving throw at the end of its turns. On a
+      success, the spell ends.</span></p>
+    tint: '#ffffff'
+    transfer: false
+    statuses:
+      - restrained
+    sort: 0
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.5
+      lastModifiedBy: null
+    _key: '!items.effects!ttsplEnsnaringSt.tFGMG3cjQTEeAhv2'
+folder: tJl523UJhfwLWMyI
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180537937
+  modifiedTime: 1773180537937
+  lastModifiedBy: dnd5ebuilder0000
+ownership:
+  default: 0
+_id: ttsplEnsnaringSt
+sort: 100000
+_key: '!items!ttsplEnsnaringSt'

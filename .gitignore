@@ -1,0 +1,10 @@
+# Compiled LevelDB packs (generated from packs/_source/)
+packs/*
+!packs/_source/
+
+# Node
+node_modules/
+
+# Docs
+docs/_site_prod/
+docs/_site/

@@ -1,0 +1,119 @@
+name: Superior Hunter's Prey
+type: feat
+folder: cFmaotKwnVeSmRCe
+img: icons/skills/ranged/arrows-flying-triple-blue.webp
+system:
+  description:
+    value: >-
+      <p>The first time you deal damage to a creature with your Hunter’s Mark
+      spell on your turn, the spell deals additional 2d6 damage, in addition, if
+      the creature uses its movement before your next turn to move further away
+      from you, it takes another 2d6 force damage.</p><section class="secret"
+      id="secret-AuiRnxdHXs9cXvQV"><p><strong>Foundry Note</strong></p><p>You
+      can apply the damage from Hunter's Mark or use the <strong>Damage</strong>
+      activity on this feature.</p></section>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  uses:
+    max: ''
+    spent: 0
+    recovery: []
+  type:
+    value: class
+    subtype: ''
+  prerequisites:
+    level: 11
+    items: []
+    repeatable: false
+  properties: []
+  requirements: ''
+  activities:
+    yqOAxbsX16RkOx06:
+      type: damage
+      _id: yqOAxbsX16RkOx06
+      activation:
+        type: ''
+        value: null
+        override: false
+        condition: ''
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets: []
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects: []
+      range:
+        override: false
+        units: ft
+        special: Of the damaged creature
+        value: '30'
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          count: '1'
+          type: creature
+          special: ''
+        override: false
+        prompt: false
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      sort: 0
+      damage:
+        critical:
+          allow: true
+        parts:
+          - custom:
+              enabled: true
+              formula: 2d6
+            number: null
+            denomination: 0
+            bonus: ''
+            types:
+              - force
+            scaling:
+              number: 1
+      name: ''
+      flags: {}
+      visibility:
+        level:
+          min: null
+          max: null
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+        identifier: ''
+  enchant: {}
+  identifier: superior-hunters-prey
+  advancement: []
+  crewed: false
+effects: []
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180364370
+  modifiedTime: 1773180364370
+  lastModifiedBy: dnd5ebuilder0000
+ownership:
+  default: 0
+_id: ttrgrSuperiorHun
+sort: 112500
+_key: '!items!ttrgrSuperiorHun'

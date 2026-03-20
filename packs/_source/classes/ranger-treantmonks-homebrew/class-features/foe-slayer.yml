@@ -1,0 +1,177 @@
+_id: ttrgrFoeSlayer00
+name: Foe Slayer
+type: feat
+folder: h5OUzaJcZzsNsOGc
+img: icons/skills/targeting/crosshair-triple-strike-orange.webp
+system:
+  description:
+    value: >-
+      <p>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHuntersMar]{Hunter’s
+      Mark} is a d10 rather than a d6.</p><p>When you hit with an attack roll,
+      you may turn the hit into a Critical Hit. You may turn a hit into a
+      Critical Hit a number of times equal to your Wisdom modifier (minimum of
+      once), and you regain all expended uses when you finish a Long
+      Rest.</p><section class="secret"
+      id="secret-GUET2urq4zcuitcV"><p><strong>Foundry Note</strong></p><p>You
+      may use this feature in place of the <strong>Bonus Mark Damage</strong>
+      activity on the <em>Hunter's Mark</em> spell.</p></section>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  uses:
+    max: max(1,@abilities.wis.mod)
+    spent: 0
+    recovery:
+      - period: lr
+        type: recoverAll
+  type:
+    value: class
+    subtype: ''
+  prerequisites:
+    level: 20
+    items: []
+    repeatable: false
+  properties: []
+  requirements: ''
+  activities:
+    GG4mc3Bw4ArJEUJY:
+      type: damage
+      activation:
+        type: ''
+        value: null
+        override: true
+        condition: ''
+      consumption:
+        targets: []
+        scaling:
+          allowed: false
+          max: ''
+        spellSlot: false
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        override: true
+        concentration: false
+      effects: []
+      range:
+        override: true
+        units: any
+        special: ''
+      target:
+        prompt: true
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          count: ''
+          type: ''
+        override: false
+      damage:
+        critical:
+          allow: false
+          bonus: ''
+        parts:
+          - custom:
+              enabled: false
+              formula: ''
+            number: 1
+            denomination: 10
+            bonus: ''
+            types:
+              - force
+            scaling:
+              number: 1
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      sort: 100000
+      name: Improved Hunter's Mark Damage
+      _id: GG4mc3Bw4ArJEUJY
+      flags: {}
+      visibility:
+        level: {}
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+    vtB4xnT5LEMHEVmg:
+      type: utility
+      name: Create Critical
+      _id: vtB4xnT5LEMHEVmg
+      sort: 0
+      activation:
+        type: ''
+        override: false
+        condition: when you hit with an attack roll
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets:
+          - type: itemUses
+            value: '1'
+            target: ''
+            scaling: {}
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects: []
+      flags: {}
+      range:
+        units: self
+        override: false
+        special: ''
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          type: self
+        override: false
+        prompt: true
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      visibility:
+        level:
+          min: null
+          max: null
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+        identifier: ''
+      roll:
+        prompt: false
+        visible: false
+        name: ''
+        formula: ''
+  enchant: {}
+  identifier: foe-slayer
+  advancement: []
+  crewed: false
+effects: []
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180096887
+  modifiedTime: 1773180096887
+  lastModifiedBy: dnd5ebuilder0000
+sort: 0
+ownership:
+  default: 0
+_key: '!items!ttrgrFoeSlayer00'

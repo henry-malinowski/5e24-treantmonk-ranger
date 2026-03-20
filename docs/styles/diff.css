@@ -1,0 +1,120 @@
+/* ─── Diff view — deleted (PHB) vs. added (homebrew) inline comparison ─────── */
+
+/* Base: deleted spans are fully removed from flow by default.
+   JS switches to display: inline-block during animation. */
+.diff-del {
+  display: none;
+  vertical-align: baseline;
+  border-radius: 2px;
+}
+
+/* Active diff mode: settled decoration for revealed deleted text */
+#modal.modal--diff .diff-del {
+  display: inline;
+  background: rgba(220, 80, 80, 0.12);
+  border-bottom: 1.5px solid rgba(220, 80, 80, 0.4);
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+/* Added text — gold tint, CSS transition for box-in */
+.diff-add {
+  transition:
+    background var(--transition),
+    border-bottom var(--transition);
+}
+
+#modal.modal--diff .diff-add {
+  background: rgba(238, 155, 58, 0.12);
+  border-bottom: 1.5px solid var(--gold-dim);
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+/* ─── Block-level diff containers ────────────────────────────────────────── */
+/* .diff-block is added alongside .diff-add/.diff-del on div wrappers emitted  */
+/* by the block rule, to avoid specificity collisions with the inline span     */
+/* rules above (which use display: inline / display: none on those classes).   */
+
+.diff-add.diff-block {
+  display: flow-root; /* BFC: prevents background from extending under floats */
+}
+
+.diff-del.diff-block {
+  display: none;
+}
+
+#modal.modal--diff .diff-del.diff-block {
+  display: flow-root; /* overrides the display: inline rule above */
+}
+
+/* ─── Diff toggle pill ────────────────────────────────────────────────────── */
+
+.diff-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  user-select: none;
+  margin-right: auto; /* push close button to the right */
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.diff-toggle-label {
+  font-family: "Modesto Condensed", serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  transition: color var(--transition);
+}
+
+.diff-toggle:has(input:checked) .diff-toggle-label {
+  color: var(--gold);
+}
+
+.diff-toggle-track {
+  position: relative;
+  width: 34px;
+  height: 18px;
+  background: var(--surface-3);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  transition:
+    background var(--transition),
+    border-color var(--transition);
+
+  input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+
+.diff-toggle:has(input:checked) .diff-toggle-track {
+  background: rgba(238, 155, 58, 0.15);
+  border-color: var(--gold-dim);
+}
+
+.diff-toggle-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  background: var(--text-dim);
+  border-radius: 50%;
+  transition:
+    transform var(--transition),
+    background var(--transition);
+}
+
+.diff-toggle:has(input:checked) .diff-toggle-thumb {
+  transform: translateX(16px);
+  background: var(--gold);
+}

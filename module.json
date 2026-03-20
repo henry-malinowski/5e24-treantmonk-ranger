@@ -1,0 +1,129 @@
+{
+  "id": "5e24-treantmonk-ranger",
+  "title": "Treantmonk's Ranger Homebrew",
+  "description": "A Foundry implementation of Treantmonk's Ranger Homebrew",
+  "authors": [
+    {
+      "name": "Henry Malinowski",
+      "discord": "hmalinowski",
+      "flags": {}
+    }
+  ],
+  "media": [
+    {
+      "type": "setup",
+      "url": "modules/5e24-treantmonk-ranger/assets/banners/media-cover.webp"
+    }
+  ],
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "13.347",
+    "verified": "13"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "5.2.4",
+          "verified": "5.2.5"
+        }
+      }
+    ],
+    "requires": [
+      {
+        "id": "dnd-players-handbook",
+        "type": "module",
+        "compatibility": {
+          "verified": "2.1.0"
+        }
+      },
+      {
+        "id": "lib-wrapper",
+        "type": "module",
+        "manifest": "https://github.com/ruipin/fvtt-lib-wrapper/releases/latest/download/module.json",
+        "compatibility": {
+          "verified": "1.13.3.0"
+        }
+      }
+    ]
+  },
+  "esmodules": ["scripts/5e24-treantmonk-ranger.mjs"],
+  "packs": [
+    {
+      "name": "content",
+      "label": "Treantmonk's Ranger Homebrew",
+      "system": "dnd5e",
+      "path": "packs/content",
+      "type": "JournalEntry",
+      "banner": "modules/5e24-treantmonk-ranger/assets/compendium/banner-01.webp"
+    },
+    {
+      "name": "classes",
+      "label": "Character Classes",
+      "system": "dnd5e",
+      "path": "packs/classes",
+      "type": "Item",
+      "banner": "modules/5e24-treantmonk-ranger/assets/compendium/banner-02.webp",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "actors",
+      "label": "Actors",
+      "system": "dnd5e",
+      "path": "packs/actors",
+      "type": "Actor",
+      "banner": "modules/5e24-treantmonk-ranger/assets/compendium/banner-03.webp",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "spells",
+      "label": "Spells",
+      "system": "dnd5e",
+      "path": "packs/spells",
+      "type": "Item",
+      "banner": "modules/5e24-treantmonk-ranger/assets/compendium/banner-04.webp",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {
+        "dnd5e": {
+          "types": ["spell"]
+        }
+      }
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Treantmonk's Ranger Homebrew",
+      "color": "#3b7170",
+      "sorting": "m",
+      "packs": ["content", "classes", "actors", "spells"]
+    }
+  ],
+  "flags": {
+    "hotReload": false,
+    "dnd5e": {
+      "sourceBooks": {
+        "TT-Ranger": "Treantmonk's Ranger Homebrew"
+      },
+      "spellLists": [
+        "Compendium.5e24-treantmonk-ranger.content.JournalEntry.ttRanger00000000.JournalEntryPage.t90FCTjUy82q68iV"
+      ]
+    }
+  },
+  "readme": "https://github.com/henry-malinowski/5e24-treantmonk-ranger#readme",
+  "bugs": "https://github.com/henry-malinowski/5e24-treantmonk-ranger/issues",
+  "changelog": "https://github.com/henry-malinowski/5e24-treantmonk-ranger/blob/master/CHANGELOG.md",
+  "url": "https://github.com/henry-malinowski/5e24-treantmonk-ranger",
+  "manifest": "https://github.com/henry-malinowski/5e24-treantmonk-ranger/releases/latest/download/module.json",
+  "download": "https://github.com/henry-malinowski/5e24-treantmonk-ranger/releases/latest/download/module.zip"
+}

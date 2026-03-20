@@ -1,0 +1,288 @@
+_id: ttrgrTireless000
+name: Tireless
+type: feat
+folder: h5OUzaJcZzsNsOGc
+img: icons/magic/life/cross-worn-green.webp
+system:
+  description:
+    value: >-
+      <p>Primal forces now help fuel you on your journeys, granting you the
+      following benefits.</p><p><strong>Temporary Hit Points.</strong> As a
+      Magic action, you can give yourself a number of Temporary Hit Points equal
+      to 1d8 plus your Wisdom modifier (minimum of 1). You can use this action a
+      number of times equal to your Wisdom modifier (minimum of once), and you
+      regain all expended uses when you finish a Long
+      Rest.</p><p><strong>Decrease Exhaustion.</strong> Whenever you finish a
+      Short Rest, your Exhaustion level, if any, decreases by
+      1.</p><p><strong>Endurance.</strong> Whenever you would gain Exhaustion,
+      you may reduce the Exhaustion gained by 1 by expending one use of your
+      @UUID[Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrFavoredEnem]{Favored
+      Enemy} ability. Your D20 Tests are reduced by 1 times your Exhaustion
+      level (instead of 2 times). Your Exhaustion level is halved (rounded down)
+      when determining the amount your Speed is reduced.</p><section
+      class="secret" id="secret-wlhwV2MDwGKQ8plw"><p><strong>Foundry
+      Note</strong></p><p>The <strong>Temporary Hit Points</strong> activity can
+      apply the Temporary Hit Points to you.</p><p>The <strong>Decrease
+      Exhaustion</strong> activity will decrease your
+      Exhaustion.</p><p>Endurance includes an Active Effect which cancels out
+      the effect of exhaustion as described in this feature.</p></section>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  uses:
+    max: ''
+    spent: 0
+    recovery: []
+  type:
+    value: class
+    subtype: ''
+  prerequisites:
+    level: 10
+    items: []
+    repeatable: false
+  properties: []
+  requirements: ''
+  activities:
+    T17ZXCxvxeDwPoz5:
+      type: heal
+      name: Temporary Hit Points
+      _id: T17ZXCxvxeDwPoz5
+      activation:
+        type: action
+        value: null
+        override: false
+        condition: ''
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets:
+          - type: activityUses
+            value: '1'
+            scaling: {}
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects: []
+      range:
+        override: false
+        units: self
+        special: ''
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          count: ''
+          type: self
+          special: ''
+        override: false
+        prompt: false
+      uses:
+        spent: 0
+        recovery:
+          - period: lr
+            type: recoverAll
+        max: (max(1,@abilities.wis.mod))
+      sort: 0
+      healing:
+        number: 1
+        denomination: 8
+        types:
+          - temphp
+        custom:
+          enabled: false
+        scaling:
+          number: 1
+        bonus: (max(1,@abilities.wis.mod))
+      flags: {}
+      visibility:
+        level: {}
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+    y2cSZJxteG7Yew0u:
+      type: utility
+      name: Decrease Exhaustion
+      _id: y2cSZJxteG7Yew0u
+      activation:
+        type: ''
+        value: null
+        override: false
+        condition: Whenever you finish a Short Rest
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets:
+          - type: attribute
+            value: '1'
+            target: attributes.exhaustion
+            scaling: {}
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects: []
+      range:
+        override: false
+        units: self
+        special: ''
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          count: ''
+          type: self
+          special: ''
+        override: false
+        prompt: false
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      sort: 0
+      roll:
+        prompt: false
+        visible: false
+        name: ''
+        formula: ''
+      flags: {}
+      visibility:
+        level: {}
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+    M2eekRbpmTyY3oyZ:
+      type: utility
+      name: Endurance
+      _id: M2eekRbpmTyY3oyZ
+      sort: 0
+      activation:
+        type: ''
+        override: false
+        condition: when you would again Exhaustion
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets:
+          - type: itemUses
+            value: '1'
+            target: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrFavoredEnem
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects: []
+      flags: {}
+      range:
+        units: self
+        override: false
+        special: ''
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          type: self
+        override: false
+        prompt: true
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      visibility:
+        level:
+          min: null
+          max: null
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+        identifier: ''
+      roll:
+        prompt: false
+        visible: false
+        name: ''
+        formula: ''
+      img: ''
+  enchant: {}
+  identifier: tireless
+  advancement: []
+  crewed: false
+effects:
+  - name: Endurance
+    img: icons/magic/life/cross-worn-green.webp
+    origin: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrTireless000
+    _id: Q9fHXTGTOw8fDi7x
+    type: base
+    system: {}
+    changes:
+      - key: flags.5e24-treantmonk-ranger.tireless
+        mode: 5
+        value: 'true'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      combat: null
+      seconds: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: >-
+      <p><strong>Endurance.</strong> Whenever you would gain Exhaustion, you may
+      reduce the Exhaustion gained by 1 by expending one use of your Favored
+      Enemy ability. Your D20 Tests are reduced by 1 times your Exhaustion level
+      (instead of 2 times). Your Exhaustion level is halved (rounded down) when
+      determining the amount your Speed is reduced.</p>
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags:
+      dnd5e:
+        riders:
+          statuses: []
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.5
+      createdTime: 1773189168237
+      modifiedTime: 1773586939441
+      lastModifiedBy: dnd5ebuilder0000
+    _key: '!items.effects!ttrgrTireless000.Q9fHXTGTOw8fDi7x'
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180149498
+  modifiedTime: 1773586956986
+  lastModifiedBy: dnd5ebuilder0000
+sort: 0
+ownership:
+  default: 0
+_key: '!items!ttrgrTireless000'

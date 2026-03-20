@@ -1,0 +1,187 @@
+_id: ttrgrFavoredEnem
+name: Favored Enemy
+type: feat
+folder: h5OUzaJcZzsNsOGc
+img: icons/creatures/abilities/dragon-breath-purple.webp
+system:
+  description:
+    value: >-
+      <p>Choose any two spells from the list below that you could select as
+      prepared Ranger spells. Those spells are always prepared for you. When you
+      use a spell slot to cast any of the chosen spells, you may immediately
+      recover the spell slot (no action required) by expending a number of uses
+      of this ability equal to the spell slot level.</p><p>You begin with two
+      uses of this ability and the uses increase when you reach certain levels
+      as shown on the Ranger class chart. You recover any expended uses of this
+      ability and may change your selected spells when you complete a Long
+      Rest.</p><section class="fvtt advice"
+      style="margin:0.5rem;padding:0.5rem"><table
+      class="center-table"><tbody><tr><th><p>Ranger Spell</p></th><th><p>Spell
+      Slot
+      Level</p></th></tr><tr><td><p>@UUID[Compendium.5e24-treantmonk-ranger.spells.Item.ttsplEnsnaringSt]{Ensnaring
+      Strike}</p></td><td><p>1st</p></td></tr><tr><td><p>@UUID[Compendium.5e24-treantmonk-ranger.spells.Item.ttsplHailofThorn]{Hail
+      of
+      Thorns}</p></td><td><p>1st</p></td></tr><tr><td><p>@UUID[Compendium.5e24-treantmonk-ranger.spells.Item.ttsplHuntersMark]{Hunter’s
+      Mark}</p></td><td><p>1st</p></td></tr><tr><td><p>@UUID[Compendium.5e24-treantmonk-ranger.spells.Item.ttsplCordonofArr]{Cordon
+      of
+      Arrows}</p></td><td><p>2nd</p></td></tr><tr><td><p>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplConjureBar]{Conjure
+      Barrage}</p></td><td><p>3rd</p></td></tr><tr><td><p>@UUID[Compendium.5e24-treantmonk-ranger.spells.Item.ttsplLightningAr]{Lightning
+      Arrow}</p></td><td><p>3rd</p></td></tr><tr><td><p>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplConjureVol]{Conjure
+      Volley}</p></td><td><p>5th</p></td></tr><tr><td><p>@UUID[Compendium.5e24-treantmonk-ranger.spells.Item.ttsplSwiftQuiver]{Swift
+      Quiver}</p></td><td><p>5th</p></td></tr></tbody></table></section><section
+      class="secret" id="secret-gpBG7RSBffmHnjqS"><p><strong>Foundry
+      Note</strong></p><p>You may choose new different spells are your
+      <strong>Favored Enemy</strong> spells by editing the item, opening the
+      Advancement table, and clicking the gear to revise your selection upon
+      completion of a Long Rest.</p></section>
+    chat: >-
+      <p>Choose any two spells from the list below that you could select as
+      prepared Ranger spells. Those spells are always prepared for you. When you
+      use a spell slot to cast any of the chosen spells, you may immediately
+      recover the spell slot (no action required) by expending a number of uses
+      of this ability equal to the spell slot level.</p><p>You begin with two
+      uses of this ability and the uses increase when you reach certain levels
+      as shown on the Ranger class chart. You recover any expended uses of this
+      ability and may change your selected spells when you complete a Long
+      Rest.</p>
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  uses:
+    max: '@scale.ranger.favored-enemy'
+    spent: 0
+    recovery:
+      - period: lr
+        type: recoverAll
+  type:
+    value: class
+    subtype: ''
+  prerequisites:
+    level: 1
+    items: []
+    repeatable: false
+  properties: []
+  requirements: ''
+  activities:
+    JBWsK9djnlPU5c6t:
+      type: utility
+      name: Regain Spellslot
+      _id: JBWsK9djnlPU5c6t
+      sort: 0
+      activation:
+        type: ''
+        override: false
+        condition: ''
+      consumption:
+        scaling:
+          allowed: true
+          max: '@scale.ranger.favored-enemy'
+        spellSlot: true
+        targets:
+          - type: itemUses
+            value: '1'
+            target: ''
+            scaling:
+              mode: amount
+              formula: ''
+          - type: spellSlots
+            value: '-1'
+            target: '1'
+            scaling:
+              mode: level
+              formula: ''
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects: []
+      flags: {}
+      range:
+        units: self
+        override: false
+        special: ''
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          type: ''
+        override: false
+        prompt: false
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      visibility:
+        level:
+          min: null
+          max: null
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+        identifier: ''
+      roll:
+        prompt: false
+        visible: false
+        name: ''
+        formula: ''
+  enchant: {}
+  identifier: favored-enemy
+  advancement:
+    - type: ItemChoice
+      _id: L9QfMcX7qTYSfXE6
+      configuration:
+        allowDrops: false
+        choices:
+          '1':
+            count: 2
+            replacement: true
+        pool:
+          - uuid: Compendium.5e24-treantmonk-ranger.spells.Item.ttsplEnsnaringSt
+          - uuid: Compendium.5e24-treantmonk-ranger.spells.Item.ttsplHailofThorn
+          - uuid: Compendium.5e24-treantmonk-ranger.spells.Item.ttsplHuntersMark
+          - uuid: Compendium.5e24-treantmonk-ranger.spells.Item.ttsplCordonofArr
+          - uuid: Compendium.dnd-players-handbook.spells.Item.phbsplConjureBar
+          - uuid: Compendium.5e24-treantmonk-ranger.spells.Item.ttsplLightningAr
+          - uuid: Compendium.dnd-players-handbook.spells.Item.phbsplConjureVol
+          - uuid: Compendium.5e24-treantmonk-ranger.spells.Item.ttsplSwiftQuiver
+        restriction:
+          list: []
+          level: ''
+        spell:
+          ability: []
+          method: spell
+          uses:
+            max: ''
+            per: ''
+            requireSlot: true
+          prepared: 2
+        type: spell
+      value:
+        added: {}
+        replaced: {}
+      title: Choose Favored Enemy spells
+      hint: >-
+        You must have spell slots available for the spell you wish to choose as
+        your Favored Enemy spells.
+  crewed: false
+effects: []
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180070124
+  modifiedTime: 1773859495499
+  lastModifiedBy: dnd5ebuilder0000
+sort: 0
+ownership:
+  default: 0
+_key: '!items!ttrgrFavoredEnem'

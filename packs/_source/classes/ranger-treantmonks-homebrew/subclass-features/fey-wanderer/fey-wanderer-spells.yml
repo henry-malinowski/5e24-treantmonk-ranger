@@ -1,0 +1,156 @@
+name: Fey Wanderer Spells
+type: feat
+folder: T745jMPShn5jwq4M
+img: icons/magic/nature/leaf-rune-glow-green.webp
+system:
+  description:
+    value: >-
+      <p>When you reach a Ranger level specified in the Fey Wanderer Spells
+      table, you thereafter always have the listed spells
+      prepared.</p><table><caption>Fey Wanderer
+      Spells</caption><thead><tr><td>Ranger
+      Level</td><td>Spell</td></tr></thead><tbody><tr><td>3</td><td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCharmPerso]{Charm
+      Person}</td></tr><tr><td>5</td><td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMistyStep0]{Misty
+      Step}</td></tr><tr><td>9</td><td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSummonFey0]{Summon
+      Fey}</td></tr><tr><td>13</td><td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDimensionD]{Dimension
+      Door}</td></tr><tr><td>17</td><td>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMislead000]{Mislead}</td></tr></tbody></table><p>You
+      also possess a fey blessing. Choose it from the Feywild Gifts table or
+      determine it
+      randomly.</p><p>@Embed[Compendium.dnd-players-handbook.tables.RollTable.phbFeywildGifts0
+      rollable]</p><section class="secret"
+      id="secret-iOmJyauf3eYFUSIM"><p><strong>Foundry Note</strong></p><p>The
+      spells will be automatically granted as you level up.</p></section>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  uses:
+    max: ''
+    spent: 0
+    recovery: []
+  type:
+    value: class
+    subtype: ''
+  prerequisites:
+    level: 3
+    items: []
+    repeatable: false
+  properties: []
+  requirements: ''
+  activities: {}
+  enchant: {}
+  identifier: fey-wanderer-spells
+  advancement:
+    - type: ItemGrant
+      _id: I8OwK1GXlDgZuEi0
+      configuration:
+        items:
+          - optional: false
+            uuid: Compendium.dnd-players-handbook.spells.Item.phbsplMistyStep0
+        optional: false
+        spell:
+          ability: []
+          method: spell
+          uses:
+            max: ''
+            per: ''
+            requireSlot: false
+          prepared: 2
+      value: {}
+      level: 5
+      title: Fey Wanderer Spells
+      hint: ''
+    - _id: uE246vo2KTJFrDb6
+      type: ItemGrant
+      configuration:
+        items:
+          - optional: false
+            uuid: Compendium.dnd-players-handbook.spells.Item.phbsplCharmPerso
+        optional: false
+        spell:
+          ability: []
+          uses:
+            max: ''
+            per: ''
+            requireSlot: false
+          method: spell
+          prepared: 2
+      value: {}
+      level: 3
+      title: Fey Wanderer Spells
+      hint: ''
+    - _id: ApuOilYuWlOmNpfX
+      type: ItemGrant
+      configuration:
+        items:
+          - optional: false
+            uuid: Compendium.dnd-players-handbook.spells.Item.phbsplSummonFey0
+        optional: false
+        spell:
+          ability: []
+          uses:
+            max: ''
+            per: ''
+            requireSlot: false
+          method: spell
+          prepared: 2
+      value: {}
+      level: 9
+      title: Fey Wanderer Spells
+      hint: ''
+    - _id: isx6d7Fx8S8uFExt
+      type: ItemGrant
+      configuration:
+        items:
+          - optional: false
+            uuid: Compendium.dnd-players-handbook.spells.Item.phbsplDimensionD
+        optional: false
+        spell:
+          ability: []
+          uses:
+            max: ''
+            per: ''
+            requireSlot: false
+          method: spell
+          prepared: 2
+      value: {}
+      level: 13
+      title: Fey Wanderer Spells
+      hint: ''
+    - _id: Qzj7dJ4PN6u5yWqR
+      type: ItemGrant
+      configuration:
+        items:
+          - optional: false
+            uuid: Compendium.dnd-players-handbook.spells.Item.phbsplMislead000
+        optional: false
+        spell:
+          ability: []
+          uses:
+            max: ''
+            per: ''
+            requireSlot: false
+          method: spell
+          prepared: 2
+      value: {}
+      level: 17
+      title: Fey Wanderer Spells
+      hint: ''
+  crewed: false
+effects: []
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180258226
+  modifiedTime: 1773952302032
+  lastModifiedBy: dnd5ebuilder0000
+ownership:
+  default: 0
+_id: ttrgrFeyWanderer
+sort: 225000
+_key: '!items!ttrgrFeyWanderer'

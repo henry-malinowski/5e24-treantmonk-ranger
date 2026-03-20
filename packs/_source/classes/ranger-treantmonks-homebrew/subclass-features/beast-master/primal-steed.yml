@@ -1,0 +1,96 @@
+folder: h2T2nwR2EGvdb6aT
+name: Primal Steed
+type: feat
+_id: ttrgrPrimalSteed
+img: icons/creatures/mammals/deer-movement-leap-green.webp
+system:
+  activities: {}
+  uses:
+    spent: 0
+    recovery: []
+    max: ''
+  advancement: []
+  description:
+    value: >-
+      <p>When you summon your Beast of the Land or Beast of the Sea, you can
+      choose to make it a Primal Steed. When you do so, its size is one size
+      category larger than yours and has the anatomy to serve as a mount for
+      you. While mounted on your Primal Steed you cannot be dismounted against
+      your will. When you reach level 11, you may summon your Beast of the Sky
+      as a Primal Steed as well.</p><section class="secret"
+      id="secret-dFb0uteASfxCBh4m"><p><strong>Foundry Note</strong></p><p>Your
+      <strong>Primal Companion</strong> feature has improved to include this
+      feature.</p></section>
+    chat: ''
+  identifier: primal-steed
+  source:
+    revision: 1
+    rules: '2024'
+  crewed: false
+  enchant: {}
+  prerequisites:
+    items: []
+    repeatable: false
+    level: null
+  properties: []
+  requirements: ''
+  type:
+    value: ''
+    subtype: ''
+effects:
+  - name: Primal Steed
+    img: icons/creatures/mammals/deer-movement-leap-green.webp
+    origin: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrPrimalSteed
+    _id: S8inKqmv2Ei9zqzS
+    type: base
+    system: {}
+    changes:
+      - key: flags.5e24-treantmonk-ranger.primalSteed
+        mode: 5
+        value: 'true'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      combat: null
+      seconds: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: >-
+      <p>Primal Companions without a fly speed can be Summoned at 1 size larger
+      than your character.</p>
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags:
+      dnd5e:
+        riders:
+          statuses: []
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.5
+      createdTime: 1773508083698
+      modifiedTime: 1773508223069
+      lastModifiedBy: dnd5ebuilder0000
+    _key: '!items.effects!ttrgrPrimalSteed.S8inKqmv2Ei9zqzS'
+sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180208743
+  modifiedTime: 1773510036655
+  lastModifiedBy: dnd5ebuilder0000
+_key: '!items!ttrgrPrimalSteed'

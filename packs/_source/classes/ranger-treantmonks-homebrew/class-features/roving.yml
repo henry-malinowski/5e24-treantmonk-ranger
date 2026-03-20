@@ -1,0 +1,99 @@
+_id: ttrgrRoving00000
+name: Roving
+type: feat
+folder: h5OUzaJcZzsNsOGc
+img: icons/skills/movement/feet-winged-sandals-tan.webp
+system:
+  description:
+    value: >-
+      <p>Your Speed increases by 10 feet while you aren’t wearing Heavy armor.
+      You also have a Climb Speed and a Swim Speed equal to your Speed. You have
+      Advantage on the roll whenever you make a Strength (Athletics) check to
+      Climb or Swim.</p><p>You, and creatures of your choice traveling with you,
+      do not suffer penalties for traveling at a Normal or Fast
+      pace.</p><section class="secret"
+      id="secret-XnQYiG0fJWJSHkQw"><p><strong>Foundry Note</strong></p><p>This
+      feature includes an Active Effect which increases your Speed by 10 feet.
+      It can be disabled if you choose to wear Heavy armor.</p></section>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  uses:
+    max: ''
+    spent: 0
+    recovery: []
+  type:
+    value: class
+    subtype: ''
+  prerequisites:
+    level: 6
+    items: []
+    repeatable: false
+  properties: []
+  requirements: ''
+  activities: {}
+  enchant: {}
+  identifier: roving
+  advancement: []
+  crewed: false
+effects:
+  - name: Roving
+    img: icons/skills/movement/feet-winged-sandals-tan.webp
+    _id: J9RWCSmYGnP0fkn1
+    type: base
+    system: {}
+    changes:
+      - key: system.attributes.movement.bonus
+        mode: 2
+        value: '10'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: >-
+      <p>Your Speed increases by 10 feet while you aren’t wearing Heavy armor.
+      You also have a Climb Speed and a Swim Speed equal to your Speed. You have
+      Advantage on the roll whenever you make a Strength (Athletics) check to
+      Climb or Swim.</p><p>You, and creatures of your choice traveling with you,
+      do not suffer penalties for traveling at a Normal or Fast pace.</p>
+    origin: null
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags:
+      dnd5e:
+        riders:
+          statuses: []
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.5
+      lastModifiedBy: dnd5ebuilder0000
+      modifiedTime: 1773586807764
+    _key: '!items.effects!ttrgrRoving00000.J9RWCSmYGnP0fkn1'
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180132742
+  modifiedTime: 1773586826405
+  lastModifiedBy: dnd5ebuilder0000
+sort: 0
+ownership:
+  default: 0
+_key: '!items!ttrgrRoving00000'

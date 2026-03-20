@@ -1,0 +1,252 @@
+/* Reset and base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color var(--transition);
+
+  &:hover {
+    color: var(--gold);
+  }
+}
+
+body {
+  background-color: var(--bg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  color: var(--text);
+  font-family: "Signika", system-ui, sans-serif;
+  font-weight: 300;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes backdropIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Header */
+.site-header {
+  position: relative;
+  padding: 3.75rem 1.5rem 0;
+  text-align: center;
+  overflow: hidden;
+  animation: fadeUp 0.7s ease both;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--gold-dim) 30%,
+      var(--gold) 50%,
+      var(--gold-dim) 70%,
+      transparent 100%
+    );
+  }
+}
+
+.site-title {
+  font-family: "Modesto Condensed", serif;
+  font-size: clamp(2.1rem, 5.5vw, 3.3rem);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  color: var(--gold);
+}
+
+.site-subtitle {
+  color: var(--text-dim);
+  font-size: 0.88rem;
+  line-height: 1.75;
+  margin: 0.5rem auto 0;
+  max-width: 640px;
+  text-align: center;
+}
+
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  max-width: 280px;
+  margin: 1.25rem auto;
+  animation: fadeUp 0.7s 0.3s ease both;
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-dim));
+  }
+
+  &::after {
+    background: linear-gradient(90deg, var(--gold-dim), transparent);
+  }
+
+  i {
+    color: var(--gold-dim);
+    font-size: 0.55rem;
+  }
+}
+
+/* Main layout */
+main {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 3rem 5rem;
+}
+
+/* Manifest install section */
+.manifest-section {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 2rem 1.5rem;
+  background: var(--bg-panel);
+}
+
+.manifest-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.manifest-label {
+  font-family: "Modesto Condensed", serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.manifest-block {
+  display: flex;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
+.manifest-input {
+  flex: 1;
+  min-width: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: #7eb3d8;
+  -webkit-text-fill-color: #7eb3d8;
+  font-family:
+    "JetBrains Mono", "Cascadia Code", "Fira Code", "Consolas", "Courier New",
+    monospace;
+  font-size: 0.78rem;
+  padding: 0.55rem 1rem;
+  outline: none;
+  opacity: 1;
+  transition: border-color var(--transition);
+  cursor: text;
+
+  &:focus {
+    border-color: var(--gold-dim);
+  }
+}
+
+.manifest-copy-btn {
+  background: var(--surface-3);
+  border: 1px solid var(--border-gold);
+  border-radius: 5px;
+  color: var(--gold-dim);
+  cursor: pointer;
+  padding: 0.45rem 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-family: "Signika", sans-serif;
+  white-space: nowrap;
+  transition: all var(--transition);
+
+  &:hover {
+    border-color: var(--gold-dim);
+    color: var(--gold);
+  }
+
+  &.copied {
+    border-color: #3d8b40;
+    color: #5cb85c;
+  }
+}
+
+.site-intro {
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.88rem;
+
+  p {
+    line-height: 1.75;
+    margin-bottom: 0.25rem;
+  }
+
+  .ornament {
+    margin: 0.4rem auto;
+  }
+
+  ul {
+    list-style: none;
+    line-height: 2;
+  }
+}

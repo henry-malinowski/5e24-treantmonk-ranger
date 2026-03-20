@@ -1,0 +1,19 @@
+type: Item
+folder: null
+name: 5th Level
+color: '#66447e'
+sorting: a
+_id: NjtmKzJcT2GBPntW
+description: ''
+sort: 0
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1772297708247
+  modifiedTime: 1772297711863
+  lastModifiedBy: dnd5ebuilder0000
+_key: '!folders!NjtmKzJcT2GBPntW'

@@ -1,0 +1,126 @@
+name: Fey Wanderer
+type: subclass
+folder: 4ZMAZcPYjyR6nhax
+img: modules/dnd-players-handbook/assets/icons/classes/fey-wanderer.webp
+system:
+  description:
+    value: >-
+      <blockquote><p>Wield Fey Mirth and Fury</p></blockquote><p>A fey mystique
+      surrounds you, thanks to the boon of an archfey or a location in the
+      Feywild that transformed you. However you gained fey magic, you are now a
+      Fey Wanderer. Your joyful laughter brightens the hearts of the
+      downtrodden, and your martial prowess strikes terror in your foes, for
+      great is the mirth of the fey and dreadful is their fury.</p>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  identifier: fey
+  classIdentifier: ranger
+  advancement:
+    - _id: wacj6x75L5ZaZUky
+      type: ItemGrant
+      configuration:
+        items:
+          - uuid: Compendium.dnd-players-handbook.classes.Item.phbrgrOtherworld
+            optional: false
+          - uuid: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrDreadfulStr
+            optional: false
+          - uuid: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrFeyWanderer
+            optional: false
+        optional: false
+        spell: null
+      value: {}
+      level: 3
+      title: Subclass Features
+    - _id: 4nA7C6uQhBJBtWdS
+      type: ItemGrant
+      configuration:
+        items:
+          - uuid: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrBeguilingTw
+            optional: false
+        optional: false
+        spell: null
+      value: {}
+      level: 7
+      title: Subclass Features
+    - _id: gBE1JZA0jf6dglQu
+      type: ItemGrant
+      configuration:
+        items:
+          - uuid: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrFeyReinforc
+            optional: false
+        optional: false
+        spell: null
+      value: {}
+      level: 11
+      title: Subclass Features
+    - _id: 1P4RbYyrzFoutFrj
+      type: ItemGrant
+      configuration:
+        items:
+          - uuid: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrMistyWander
+            optional: false
+        optional: false
+        spell: null
+      value: {}
+      level: 15
+      title: Subclass Features
+    - _id: YDQg3zzcxEfqiU5q
+      type: ScaleValue
+      configuration:
+        identifier: dreadful-strike
+        type: dice
+        distance:
+          units: ''
+        scale:
+          '3':
+            number: 1
+            faces: 4
+            modifiers: []
+          '11':
+            number: 1
+            faces: 6
+            modifiers: []
+      value: {}
+      title: Dreadful Strikes
+      hint: ''
+    - _id: cVDlMpoqGjBNky2p
+      type: Trait
+      configuration:
+        mode: default
+        allowReplacements: false
+        grants: []
+        choices:
+          - count: 1
+            pool:
+              - skills:dec
+              - skills:prf
+              - skills:per
+      value:
+        chosen: []
+      level: 3
+      title: Otherworldly Glamour
+      hint: ''
+  spellcasting:
+    progression: none
+    ability: ''
+    preparation:
+      formula: ''
+effects: []
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180023321
+  modifiedTime: 1773508278588
+  lastModifiedBy: dnd5ebuilder0000
+ownership:
+  default: 0
+_id: ttrgrFeyWander00
+sort: 150000
+_key: '!items!ttrgrFeyWander00'

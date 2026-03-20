@@ -1,0 +1,171 @@
+name: Stalker's Flurry
+type: feat
+folder: HQqTHeiSLTtEV8Y6
+img: icons/magic/unholy/hand-weapon-glow-black-green.webp
+system:
+  description:
+    value: >-
+      <p>Whenever you are Invisible as a result of the Hide Action, and you make
+      a Dreadful Strike, it does not count against your number of uses per Long
+      Rest. In addition, when you use the Dreadful Strike effect of your Dread
+      Ambusher feature, you can cause one of the following additional
+      effects.</p><p><strong>Sudden Strike.</strong> You can make another attack
+      with the same weapon against a different creature that is within 5 feet of
+      the original target and that is within the weapon’s
+      range.</p><p><strong>Mass Fear.</strong> The target and each creature
+      within 30 feet of it must make a Wisdom saving throw against your spell
+      save DC. On a failed save, a creature has the &amp;Reference[Frightened]
+      condition until the start of your next turn.</p><p>If you are Invisible as
+      a result of the Hide Action when you hit a creature with a Dreadful
+      Strike, you may apply both <strong>Sudden Strike</strong> and <strong>Mass
+      Fear</strong> to the same attack.</p><section class="secret"
+      id="secret-1EO1czD31TZtrQzN"><p><strong>Foundry
+      Note</strong></p><p>Dreadful Strike has a new option to use Stalker's
+      Flurry.</p><p>To use the <strong>Sudden Strike</strong> effect simply make
+      another attack.</p><p>The <strong>Mass Fear</strong> activity on this
+      feature includes the save.</p></section>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  uses:
+    max: ''
+    spent: 0
+    recovery: []
+  type:
+    value: class
+    subtype: ''
+  prerequisites:
+    level: 11
+    items: []
+    repeatable: false
+  properties: []
+  requirements: ''
+  activities:
+    VWK5HqWXbyZ1UWlL:
+      type: save
+      _id: VWK5HqWXbyZ1UWlL
+      activation:
+        type: ''
+        value: null
+        override: false
+        condition: When you use the Dreadful Strike effect
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets: []
+      description:
+        chatFlavor: ''
+      duration:
+        units: round
+        concentration: false
+        override: false
+        value: '1'
+      effects:
+        - _id: iRbqwa1i04USESZ0
+          onSave: false
+          level:
+            min: null
+            max: null
+      range:
+        override: false
+        units: self
+        special: ''
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: radius
+          size: '30'
+          count: ''
+        affects:
+          choice: false
+          count: ''
+          type: creature
+          special: ''
+        override: false
+        prompt: false
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      sort: 0
+      damage:
+        parts: []
+        onSave: half
+      save:
+        ability:
+          - wis
+        dc:
+          calculation: spellcasting
+          formula: ''
+      name: Mass Fear
+      flags: {}
+      visibility:
+        level:
+          min: null
+          max: null
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+        identifier: ''
+      img: ''
+  enchant: {}
+  identifier: stalkers-flurry
+  advancement: []
+  crewed: false
+effects:
+  - name: Frightened
+    img: icons/magic/unholy/hand-weapon-glow-black-green.webp
+    origin: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrStalkersFlu
+    transfer: false
+    _id: iRbqwa1i04USESZ0
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      combat: null
+      seconds: 6
+      rounds: 1
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    tint: '#ffffff'
+    statuses:
+      - frightened
+    sort: 0
+    flags:
+      dnd5e:
+        riders:
+          statuses: []
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.5
+      createdTime: 1773952947028
+      modifiedTime: 1773952970485
+      lastModifiedBy: dnd5ebuilder0000
+    _key: '!items.effects!ttrgrStalkersFlu.iRbqwa1i04USESZ0'
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180314237
+  modifiedTime: 1773952975686
+  lastModifiedBy: dnd5ebuilder0000
+ownership:
+  default: 0
+_id: ttrgrStalkersFlu
+sort: 125000
+_key: '!items!ttrgrStalkersFlu'

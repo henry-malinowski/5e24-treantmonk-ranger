@@ -1,0 +1,115 @@
+name: Misty Wanderer
+type: feat
+folder: T745jMPShn5jwq4M
+img: icons/magic/movement/portal-vortex-orange.webp
+system:
+  description:
+    value: >-
+      <p>You can cast
+      @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMistyStep0]{Misty
+      Step} without expending a spell slot. You can do so a number of times
+      equal to your Wisdom modifier (minimum of once), and you regain all
+      expended uses when you finish a Long Rest.</p><p>In addition, whenever you
+      cast <em>Misty Step</em>, you can bring along one willing creature you can
+      see within 15 feet of yourself. That creature teleports to an unoccupied
+      space of your choice within 15 feet of your destination space.</p><section
+      class="secret" id="secret-ZBwLFJ6wcrANu0xZ"><p><strong>Foundry
+      Note</strong></p><p>This feature can be used for tracking your limited
+      uses. Then you can cast the spell normally and uncheck the "Consumption"
+      box.</p></section>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  uses:
+    max: (max(1,@abilities.wis.mod))
+    spent: 0
+    recovery:
+      - period: lr
+        type: recoverAll
+  type:
+    value: class
+    subtype: ''
+  prerequisites:
+    level: null
+    items: []
+    repeatable: false
+  properties: []
+  requirements: ''
+  activities:
+    dbXXB4lwKmuo0hXe:
+      type: utility
+      name: Wander
+      _id: dbXXB4lwKmuo0hXe
+      sort: 0
+      activation:
+        type: action
+        value: null
+        override: false
+        condition: ''
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets:
+          - type: itemUses
+            value: '1'
+            scaling: {}
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects: []
+      range:
+        override: false
+        units: self
+        special: ''
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          count: ''
+          type: ''
+        override: false
+        prompt: true
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      roll:
+        prompt: false
+        visible: false
+        name: ''
+        formula: ''
+      flags: {}
+      visibility:
+        level: {}
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+  enchant: {}
+  identifier: misty-wanderer
+  advancement: []
+  crewed: false
+effects: []
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180267149
+  modifiedTime: 1773952394968
+  lastModifiedBy: dnd5ebuilder0000
+ownership:
+  default: 0
+_id: ttrgrMistyWander
+sort: 250000
+_key: '!items!ttrgrMistyWander'

@@ -1,0 +1,281 @@
+name: Ranger
+_id: ttRanger00000000
+pages:
+  - sort: 100000
+    name: Ranger
+    type: class
+    _id: NDAydqiArY6jLjJM
+    system:
+      item: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrRanger00000
+      description:
+        value: >-
+          <p>@Embed[Compendium.dnd-players-handbook.content.JournalEntry.phbCh3ArtHandout.JournalEntryPage.7qN4IGLvwpc7j7KP
+          caption=false]</p><p>@Embed[Compendium.dnd-players-handbook.content.JournalEntry.phbCh3ArtHandout.JournalEntryPage.r9NYYGWNoSxEYTlU
+          caption=false classes="right two"]</p><p>Far from bustling cities,
+          amid the trees of trackless forests and across wide plains,
+          @UUID[Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrRanger00000]{Rangers}
+          keep their unending watch in the wilderness. Rangers learn to track
+          their quarry as a predator does, moving stealthily through the wilds
+          and hiding themselves in brush and rubble.</p><p>Thanks to their
+          connection with nature, Rangers can also cast spells that harness
+          primal powers of the wilderness. A Ranger’s talents and magic are
+          honed with deadly focus to protect the world from the ravages of
+          monsters and tyrants.</p><h2>Becoming a Ranger …</h2><h3>As a Level 1
+          Character</h3><ul><li><p>Gain all the traits in the Core Ranger Traits
+          table.</p></li><li><p>Gain the Ranger’s level 1 features, which are
+          listed in the Ranger Features table.</p></li></ul><h3>As a Multiclass
+          Character</h3><ul><li><p>Gain the following traits from the Core
+          Ranger Traits table: Hit Point Die, proficiency with Martial weapons,
+          proficiency in one skill of your choice from the Ranger’s skill list,
+          and training with Light and Medium armor and
+          Shields.</p></li><li><p>Gain the Ranger’s level 1 features, which are
+          listed in the Ranger Features table. See the multiclassing rules in
+          chapter 2 to determine your available spell slots.</p></li></ul>
+        additionalHitPoints: ''
+        additionalTraits: ''
+        additionalEquipment: ''
+        subclass: >-
+          <p>A Ranger subclass is a specialization that grants you features at
+          certain levels, as specified in the subclass. The next pages present
+          the Beast Master, Fey Wanderer, Gloom Stalker, and Hunter
+          subclasses.</p>
+      subclassItems: []
+      style: ''
+      subclassHeader: ''
+    title:
+      show: false
+      level: 1
+    image: {}
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    category: null
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.5
+      lastModifiedBy: dnd5ebuilder0000
+      modifiedTime: 1773182329391
+    _key: '!journal.pages!ttRanger00000000.NDAydqiArY6jLjJM'
+  - sort: 300000
+    name: Beast Master
+    type: subclass
+    _id: qw556DvWP5rr8kis
+    system:
+      item: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrBeastMaster
+      description:
+        value: >-
+          <p>@Embed[Compendium.dnd-players-handbook.content.JournalEntry.phbCh3ArtHandout.JournalEntryPage.fzHuYQM4SG6qynLV
+          caption=false classes="three right"]</p><blockquote><p>Bond with a
+          Primal Beast</p></blockquote><p>A
+          @UUID[Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrBeastMaster]{Beast
+          Master} forms a mystical bond with a special animal, drawing on primal
+          magic and a deep connection to the natural world.</p>
+      style: ''
+    title:
+      show: true
+      level: 1
+    image: {}
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    category: null
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.5
+      lastModifiedBy: null
+    _key: '!journal.pages!ttRanger00000000.qw556DvWP5rr8kis'
+  - sort: 400000
+    name: Fey Wanderer
+    type: subclass
+    _id: hQYBdnkOcPCmCScT
+    system:
+      item: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrFeyWander00
+      description:
+        value: >-
+          <p>@Embed[Compendium.dnd-players-handbook.content.JournalEntry.phbCh3ArtHandout.JournalEntryPage.ckJhsBIlf7Qxo19z
+          caption=false classes="three right"]</p><blockquote><p>Wield Fey Mirth
+          and Fury</p></blockquote><p>A fey mystique surrounds you, thanks to
+          the boon of an archfey or a location in the Feywild that transformed
+          you. However you gained fey magic, you are now a
+          @UUID[Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrFeyWander00]{Fey
+          Wanderer}. Your joyful laughter brightens the hearts of the
+          downtrodden, and your martial prowess strikes terror in your foes, for
+          great is the mirth of the fey and dreadful is their fury.</p>
+      style: ''
+    title:
+      show: true
+      level: 1
+    image: {}
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    category: null
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.5
+      lastModifiedBy: dnd5ebuilder0000
+      modifiedTime: 1773437019914
+    _key: '!journal.pages!ttRanger00000000.hQYBdnkOcPCmCScT'
+  - sort: 500000
+    name: Gloom Stalker
+    type: subclass
+    _id: Eui25d1n5XPEOBEt
+    system:
+      item: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrGloomStalke
+      description:
+        value: >-
+          <p>@Embed[Compendium.dnd-players-handbook.content.JournalEntry.phbCh3ArtHandout.JournalEntryPage.6lH0bBjC8Fxg9rkI
+          caption=false classes="three right"]</p><blockquote><p>Draw on Shadow
+          Magic to Fight Your
+          Foes</p></blockquote><p>@UUID[Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrGloomStalke]{Gloom
+          Stalkers} are at home in the darkest places, wielding magic drawn from
+          the Shadowfell to combat enemies that lurk in darkness.</p>
+      style: ''
+    title:
+      show: true
+      level: 1
+    image: {}
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    category: null
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.5
+      lastModifiedBy: null
+    _key: '!journal.pages!ttRanger00000000.Eui25d1n5XPEOBEt'
+  - sort: 600000
+    name: Hunter
+    type: subclass
+    _id: TPmsraZG29LzJS6J
+    system:
+      item: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrHunter00000
+      description:
+        value: >-
+          <p>@Embed[Compendium.dnd-players-handbook.content.JournalEntry.phbCh3ArtHandout.JournalEntryPage.eDSDWaZqyZqNAGxd
+          caption=false classes="three right"]</p><blockquote><p>Protect Nature
+          and People from Destruction</p></blockquote><p>You stalk prey in the
+          wilds and elsewhere, using your abilities as a
+          @UUID[Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrHunter00000]{Hunter}
+          to protect nature and people everywhere from forces that would destroy
+          them.</p>
+      style: ''
+    title:
+      show: true
+      level: 1
+    image: {}
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    category: null
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.5
+      lastModifiedBy: null
+    _key: '!journal.pages!ttRanger00000000.TPmsraZG29LzJS6J'
+  - sort: 800000
+    name: Improved Ranger Spells
+    type: spells
+    _id: t90FCTjUy82q68iV
+    system:
+      type: class
+      grouping: level
+      description:
+        value: ''
+      spells:
+        - Compendium.5e24-treantmonk-ranger.spells.Item.ttsplEnsnaringSt
+        - Compendium.5e24-treantmonk-ranger.spells.Item.ttsplHailofThorn
+        - Compendium.5e24-treantmonk-ranger.spells.Item.ttsplHuntersMark
+        - Compendium.5e24-treantmonk-ranger.spells.Item.ttsplCordonofArr
+        - Compendium.5e24-treantmonk-ranger.spells.Item.ttsplLightningAr
+        - Compendium.5e24-treantmonk-ranger.spells.Item.ttsplSwiftQuiver
+      unlinkedSpells: []
+      identifier: ranger
+    title:
+      show: true
+      level: 1
+    image: {}
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    category: null
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.5
+      createdTime: 1773508320753
+      modifiedTime: 1773508339934
+      lastModifiedBy: dnd5ebuilder0000
+    _key: '!journal.pages!ttRanger00000000.t90FCTjUy82q68iV'
+folder: null
+categories: []
+sort: 0
+ownership:
+  default: 0
+flags:
+  core:
+    sheetClass: dnd-players-handbook.PlayersHandbookJournalSheet
+    locked: true
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773179965716
+  modifiedTime: 1773180580451
+  lastModifiedBy: dnd5ebuilder0000
+_key: '!journal!ttRanger00000000'

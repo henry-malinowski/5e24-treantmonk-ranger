@@ -1,0 +1,55 @@
+name: Exceptional Training
+type: feat
+folder: h2T2nwR2EGvdb6aT
+img: icons/creatures/abilities/cougar-roar-rush-orange.webp
+system:
+  description:
+    value: >-
+      <p>Commanding your Primal Companion on your turn no longer requires a
+      Bonus Action, and the Primal Companion’s AC gains a +2 bonus and its Hit
+      Points increase by a number equal to twice your Ranger level.</p><p>In
+      addition, whenever it hits with an attack roll and deals damage, it can
+      deal your choice of Force damage or its normal damage type.</p><section
+      class="secret" id="secret-89HAgv9EutIlQzJR"><p><strong>Foundry
+      Note</strong></p><p>Your <strong>Primal Companion</strong> feature has
+      improved to include this feature.</p></section>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  uses:
+    max: ''
+    spent: 0
+    recovery: []
+  type:
+    value: class
+    subtype: ''
+  prerequisites:
+    level: 7
+    items: []
+    repeatable: false
+  properties:
+    - trait
+  requirements: ''
+  activities: {}
+  enchant: {}
+  identifier: exceptional-training
+  advancement: []
+  crewed: false
+effects: []
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180191455
+  modifiedTime: 1773510062288
+  lastModifiedBy: dnd5ebuilder0000
+ownership:
+  default: 0
+_id: ttrgrExceptional
+sort: 200000
+_key: '!items!ttrgrExceptional'

@@ -1,0 +1,69 @@
+folder: cFmaotKwnVeSmRCe
+name: Mark of the Hunter
+type: feat
+_id: ttrgrMarkoftheHu
+img: icons/skills/targeting/target-strike-triple-blue.webp
+system:
+  activities: {}
+  uses:
+    spent: 0
+    recovery: []
+    max: ''
+  advancement:
+    - type: ItemGrant
+      _id: ZdJbIa2rSx7Xo1E0
+      configuration:
+        items:
+          - optional: false
+            uuid: Compendium.5e24-treantmonk-ranger.spells.Item.ttsplHuntersMark
+        optional: false
+        spell:
+          ability: []
+          method: spell
+          uses:
+            max: ''
+            per: ''
+            requireSlot: false
+          prepared: 2
+      value: {}
+      level: 3
+      title: ''
+      hint: ''
+  description:
+    value: >-
+      <p>You have the
+      @UUID[Compendium.5e24-treantmonk-ranger.spells.Item.ttsplHuntersMark]{Hunter’s
+      Mark} spell prepared and it is treated as a Favored Enemy spell for
+      you.</p>
+    chat: ''
+  identifier: mark-of-the-hunter
+  source:
+    revision: 1
+    rules: '2024'
+  crewed: false
+  enchant: {}
+  prerequisites:
+    items: []
+    repeatable: false
+    level: 3
+  properties:
+    - trait
+  requirements: ''
+  type:
+    value: class
+    subtype: ''
+effects: []
+sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180357312
+  modifiedTime: 1774023461542
+  lastModifiedBy: dnd5ebuilder0000
+_key: '!items!ttrgrMarkoftheHu'

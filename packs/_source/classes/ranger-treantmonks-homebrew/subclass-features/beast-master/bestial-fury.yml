@@ -1,0 +1,96 @@
+name: Bestial Fury
+type: feat
+folder: h2T2nwR2EGvdb6aT
+img: icons/creatures/abilities/paw-print-pair-purple.webp
+system:
+  description:
+    value: >-
+      <p>When you command your Primal Companion beast to take the Beast’s Strike
+      action, the beast can use it twice, and the damage of each Beast Strike
+      attack improves by +2.</p><p>In addition, if the Primal Companion needs to
+      make a Saving Throw, it can use your bonus instead of its own if it’s
+      higher.</p><section class="secret"
+      id="secret-HrciG8o5WNxBJJiD"><p><strong>Foundry Note</strong></p><p>Your
+      <strong>Primal Companion</strong> feature has improved to include this
+      feature's damage increases. You will need to manually choose which saving
+      throw bonuses to use when you Companion is forced to make a saving
+      throw.</p></section>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  uses:
+    max: ''
+    spent: 0
+    recovery: []
+  type:
+    value: class
+    subtype: ''
+  prerequisites:
+    level: 11
+    items: []
+    repeatable: false
+  properties: []
+  requirements: ''
+  activities: {}
+  enchant: {}
+  identifier: bestial-fury
+  advancement: []
+  crewed: false
+effects:
+  - name: Bestial Fury
+    img: icons/creatures/abilities/paw-print-pair-purple.webp
+    origin: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrBestialFury
+    _id: EmUG5hFHw1NMNjne
+    type: base
+    system: {}
+    changes:
+      - key: flags.5e24-treantmonk-ranger.bestialFury
+        mode: 5
+        value: 'true'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      combat: null
+      seconds: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags:
+      dnd5e:
+        riders:
+          statuses: []
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.5
+      createdTime: 1773508178410
+      modifiedTime: 1773508212386
+      lastModifiedBy: dnd5ebuilder0000
+    _key: '!items.effects!ttrgrBestialFury.EmUG5hFHw1NMNjne'
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180184211
+  modifiedTime: 1773510109748
+  lastModifiedBy: dnd5ebuilder0000
+ownership:
+  default: 0
+_id: ttrgrBestialFury
+sort: 100000
+_key: '!items!ttrgrBestialFury'

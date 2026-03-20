@@ -1,0 +1,85 @@
+name: Beast Master
+type: subclass
+folder: 4ZMAZcPYjyR6nhax
+img: modules/dnd-players-handbook/assets/icons/classes/beast-master.webp
+system:
+  description:
+    value: >-
+      <blockquote><p>Bond with a Primal Beast</p></blockquote><p>A Beast Master
+      forms a mystical bond with a special animal, drawing on primal magic and a
+      deep connection to the natural world.</p>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  identifier: beast
+  classIdentifier: ranger
+  advancement:
+    - _id: wacj6x75L5ZaZUky
+      type: ItemGrant
+      configuration:
+        items:
+          - uuid: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrPrimalCompa
+            optional: false
+        optional: false
+        spell: null
+      value: {}
+      level: 3
+      title: Subclass Features
+    - _id: 4nA7C6uQhBJBtWdS
+      type: ItemGrant
+      configuration:
+        items:
+          - uuid: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrExceptional
+            optional: false
+          - uuid: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrPrimalSteed
+            optional: false
+        optional: false
+        spell: null
+      value: {}
+      level: 7
+      title: Subclass Features
+    - _id: gBE1JZA0jf6dglQu
+      type: ItemGrant
+      configuration:
+        items:
+          - uuid: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrBestialFury
+            optional: false
+        optional: false
+        spell: null
+      value: {}
+      level: 11
+      title: Subclass Features
+    - _id: 1P4RbYyrzFoutFrj
+      type: ItemGrant
+      configuration:
+        items:
+          - uuid: Compendium.dnd-players-handbook.classes.Item.phbrgrShareSpell
+            optional: false
+        optional: false
+        spell: null
+      value: {}
+      level: 15
+      title: Subclass Features
+  spellcasting:
+    progression: none
+    ability: ''
+    preparation:
+      formula: ''
+effects: []
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180011813
+  modifiedTime: 1773508273347
+  lastModifiedBy: dnd5ebuilder0000
+ownership:
+  default: 0
+_id: ttrgrBeastMaster
+sort: 200000
+_key: '!items!ttrgrBeastMaster'

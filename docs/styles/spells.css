@@ -1,0 +1,96 @@
+/* Spell entries within the modal description.
+   .spell-title is a standard .modal-description h2 (display:flex, ::after is the flex line).
+   The school icon span sits after the line via `order`: ::after gets order:1, icon gets order:2. */
+.modal-description .spell-entry {
+  margin-top: 1.5rem;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  .spell-title {
+    &::after {
+      order: 1;
+    }
+
+    .spell-school-icon {
+      order: 2;
+      display: inline-block;
+      width: 1.1em;
+      height: 1.1em;
+      flex-shrink: 0;
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      background-color: var(--gold);
+      opacity: 0.75;
+    }
+  }
+
+  &.spell-school--abjuration .spell-title .spell-school-icon {
+    mask-image: url("../images/schools/abjuration.svg");
+  }
+  &.spell-school--conjuration .spell-title .spell-school-icon {
+    mask-image: url("../images/schools/conjuration.svg");
+  }
+  &.spell-school--divination .spell-title .spell-school-icon {
+    mask-image: url("../images/schools/divination.svg");
+  }
+  &.spell-school--enchantment .spell-title .spell-school-icon {
+    mask-image: url("../images/schools/enchantment.svg");
+  }
+  &.spell-school--evocation .spell-title .spell-school-icon {
+    mask-image: url("../images/schools/evocation.svg");
+  }
+  &.spell-school--illusion .spell-title .spell-school-icon {
+    mask-image: url("../images/schools/illusion.svg");
+  }
+  &.spell-school--necromancy .spell-title .spell-school-icon {
+    mask-image: url("../images/schools/necromancy.svg");
+  }
+  &.spell-school--transmutation .spell-title .spell-school-icon {
+    mask-image: url("../images/schools/transmutation.svg");
+  }
+
+  .spell-level-school {
+    font-size: 0.88rem;
+    font-style: italic;
+    color: var(--text-dim);
+    margin: 0 0 0.5rem;
+  }
+
+  .spell-details {
+    margin: 0 0 0.75rem;
+    font-size: 0.88rem;
+    line-height: 1.6;
+
+    dt {
+      display: inline;
+      font-weight: 600;
+      color: var(--text-head);
+
+      &::after {
+        content: ": ";
+      }
+    }
+
+    dd {
+      display: inline;
+      margin: 0;
+      color: var(--text);
+
+      &::after {
+        content: "";
+        display: block;
+      }
+    }
+  }
+
+  .spell-body {
+    margin-top: 0.5rem;
+
+    p:first-child {
+      margin-top: 0;
+    }
+  }
+}

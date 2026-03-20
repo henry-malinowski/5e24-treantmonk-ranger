@@ -1,0 +1,267 @@
+name: Hunter's Mark
+system:
+  description:
+    value: "<p>You magically mark one creature within range as your quarry. Until the spell ends, you deal an extra [[/damage]] damage to the target whenever you hit it with an attack roll. For the duration, you see the target if they have the &amp;Reference[invisible apply=false] condition as if they were visible. You also have Advantage on any [[/check ability=wis skill=sur]] check you make to find it.</p><p>If the target drops to 0 Hit Points before this spell ends, you can take a Bonus Action to move the mark to a new creature you can see within range.</p><p><strong>Using a Higher-Level Spell Slot.</strong>\_If you cast this spell using a level 3+ spell slot, the spell doesn’t require Concentration and the duration becomes 8 hours. If you use a level 5 spell slot, the spell lasts until you complete a &amp;Reference[long rest].</p>"
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  activation:
+    type: bonus
+    condition: ''
+    value: null
+  duration:
+    value: '1'
+    units: hour
+  target:
+    affects:
+      type: creature
+      count: '1'
+      choice: false
+      special: ''
+    template:
+      units: ft
+      contiguous: false
+      type: ''
+  range:
+    value: '90'
+    units: ft
+    special: ''
+  uses:
+    max: ''
+    recovery: []
+    spent: 0
+  level: 1
+  school: div
+  properties:
+    - vocal
+    - concentration
+  materials:
+    value: ''
+    consumed: false
+    cost: 0
+    supply: 0
+  activities:
+    dnd5eactivity000:
+      _id: dnd5eactivity000
+      type: damage
+      activation:
+        type: ''
+        value: null
+        override: true
+        condition: ''
+      consumption:
+        targets: []
+        scaling:
+          allowed: false
+          max: ''
+        spellSlot: false
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        override: true
+        concentration: false
+      effects: []
+      range:
+        override: true
+        units: any
+        special: ''
+      target:
+        prompt: true
+        template:
+          contiguous: false
+          units: ft
+        affects:
+          choice: false
+        override: false
+      damage:
+        critical:
+          allow: false
+          bonus: ''
+        parts:
+          - custom:
+              enabled: false
+              formula: ''
+            number: 1
+            denomination: 6
+            bonus: ''
+            types:
+              - force
+            scaling:
+              mode: ''
+              number: 1
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      sort: 200000
+      name: Bonus Mark Damage
+      flags: {}
+      visibility:
+        level:
+          min: null
+          max: null
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+    vxr2JKuQ3jyMDTwb:
+      type: utility
+      _id: vxr2JKuQ3jyMDTwb
+      activation:
+        type: action
+        value: null
+        override: false
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets: []
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects:
+        - _id: vPkln6UeePHnbLr4
+          level: {}
+      range:
+        override: false
+        units: self
+      target:
+        template:
+          contiguous: false
+          units: ft
+        affects:
+          choice: false
+        override: false
+        prompt: true
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      sort: 100000
+      roll:
+        prompt: false
+        visible: false
+        name: ''
+        formula: ''
+      name: Mark Creature
+      flags: {}
+      visibility:
+        level: {}
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+    NQtVK0T5uwfMPGQL:
+      type: utility
+      activation:
+        type: bonus
+        value: null
+        override: true
+        condition: when the currently marked target drops to 0 Hit Points
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: false
+        targets: []
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: true
+      effects:
+        - _id: vPkln6UeePHnbLr4
+          level: {}
+      range:
+        override: true
+        units: any
+        special: ''
+      target:
+        template:
+          contiguous: false
+          units: ft
+        affects:
+          choice: false
+        override: false
+        prompt: true
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      sort: 300000
+      roll:
+        prompt: false
+        visible: false
+        name: ''
+        formula: ''
+      name: Move Mark
+      _id: NQtVK0T5uwfMPGQL
+      flags: {}
+      visibility:
+        level: {}
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+  identifier: hunters-mark
+  method: spell
+  prepared: 0
+type: spell
+img: icons/skills/targeting/crosshair-scope-sniper-green.webp
+effects:
+  - name: Hunter's Mark
+    img: icons/skills/targeting/crosshair-scope-sniper-green.webp
+    origin: Compendium.dnd-players-handbook.spells.Item.phbsplHuntersMar
+    transfer: false
+    _id: vPkln6UeePHnbLr4
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      combat: null
+      seconds: 3600
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: >-
+      <p>Until the spell ends, the caster deals an extra [[/damage 1d6 force]]
+      damage to the target whenever they hit it with an attack roll.</p>
+    tint: '#ffffff'
+    statuses:
+      - marked
+    sort: 0
+    flags:
+      dnd5e:
+        riders:
+          statuses: []
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.5
+      lastModifiedBy: null
+    _key: '!items.effects!ttsplHuntersMark.vPkln6UeePHnbLr4'
+folder: tJl523UJhfwLWMyI
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180551786
+  modifiedTime: 1773180551786
+  lastModifiedBy: dnd5ebuilder0000
+ownership:
+  default: 0
+_id: ttsplHuntersMark
+sort: 150000
+_key: '!items!ttsplHuntersMark'

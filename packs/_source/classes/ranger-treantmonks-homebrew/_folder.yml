@@ -1,0 +1,19 @@
+type: Item
+folder: null
+name: Ranger (Treantmonk's Homebrew)
+color: null
+sorting: a
+_id: 4ZMAZcPYjyR6nhax
+description: ''
+sort: 0
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1772297985369
+  modifiedTime: 1772297985369
+  lastModifiedBy: dnd5ebuilder0000
+_key: '!folders!4ZMAZcPYjyR6nhax'

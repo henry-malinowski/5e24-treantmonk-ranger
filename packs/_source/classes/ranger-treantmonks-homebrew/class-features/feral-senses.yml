@@ -1,0 +1,93 @@
+_id: ttrgrFeralSenses
+name: Feral Senses
+type: feat
+folder: h5OUzaJcZzsNsOGc
+img: icons/creatures/mammals/wolf-howl-moon-forest-blue.webp
+system:
+  description:
+    value: >-
+      <p>Your connection to the forces of nature grants you Blindsight with a
+      range of 60 feet.</p><section class="secret"
+      id="secret-g31kKSDLrDEpbpbo"><p><strong>Foundry Note</strong></p><p>This
+      feature includes an Active Effect which upgrades your Blindsight to 60
+      feet if you do not already have it.</p></section>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  uses:
+    max: ''
+    spent: 0
+    recovery: []
+  type:
+    value: class
+    subtype: ''
+  prerequisites:
+    level: 18
+    items: []
+    repeatable: false
+  properties: []
+  requirements: ''
+  activities: {}
+  enchant: {}
+  identifier: feral-senses
+  advancement: []
+  crewed: false
+effects:
+  - name: Blindsight Upgrade
+    img: icons/creatures/mammals/wolf-howl-moon-forest-blue.webp
+    origin: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrFeralSenses
+    _id: 8dT7bLHXa5oM66Zz
+    type: base
+    system: {}
+    changes:
+      - key: system.attributes.senses.blindsight
+        mode: 4
+        value: '60'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      combat: null
+      seconds: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: >-
+      <p>Your connection to the forces of nature grants you Blindsight with a
+      range of 60 feet.</p>
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags:
+      dnd5e:
+        riders:
+          statuses: []
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.5
+      createdTime: 1773587167066
+      modifiedTime: 1773587208725
+      lastModifiedBy: dnd5ebuilder0000
+    _key: '!items.effects!ttrgrFeralSenses.8dT7bLHXa5oM66Zz'
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180086642
+  modifiedTime: 1773180086642
+  lastModifiedBy: dnd5ebuilder0000
+sort: 0
+ownership:
+  default: 0
+_key: '!items!ttrgrFeralSenses'

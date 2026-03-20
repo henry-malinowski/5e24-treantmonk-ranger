@@ -1,0 +1,53 @@
+name: Defensive Tactics
+type: feat
+folder: cFmaotKwnVeSmRCe
+img: icons/skills/melee/shield-block-gray-yellow.webp
+system:
+  description:
+    value: >-
+      <p>You gain the following features.</p><p><strong>Escape the
+      Horde.</strong> When you take the Attack action, you may also take the
+      &amp;Reference[Disengage] action as part of the same
+      action.</p><p><strong>Multiattack Defense.</strong> When a creature hits
+      you with an attack roll, that creature has Disadvantage on all other
+      attack rolls against you this turn.</p><p><strong>Resilience.</strong>
+      When you fail a Saving Throw, you may use your Reaction to reroll.</p>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  uses:
+    max: ''
+    spent: 0
+    recovery: []
+  type:
+    value: class
+    subtype: ''
+  prerequisites:
+    level: 7
+    items: []
+    repeatable: false
+  properties: []
+  requirements: ''
+  activities: {}
+  enchant: {}
+  identifier: defensive-tactics
+  advancement: []
+  crewed: false
+effects: []
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180337639
+  modifiedTime: 1773180337639
+  lastModifiedBy: dnd5ebuilder0000
+ownership:
+  default: 0
+_id: ttrgrDefensiveTa
+sort: 100000
+_key: '!items!ttrgrDefensiveTa'

@@ -1,0 +1,68 @@
+/* Fonts */
+@font-face {
+  font-family: "Modesto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/modesto-condensed/modesto-condensed.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Modesto Condensed";
+  font-style: normal;
+  font-weight: 600 900;
+  src: url("../fonts/modesto-condensed/modesto-condensed-bold.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Signika";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/signika/signika-light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Signika";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/signika/signika-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Signika";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/signika/signika-semibold.woff2") format("woff2");
+}
+
+/* Design tokens */
+:root {
+  --bg: #0b0a13;
+  --bg-deep: #060509;
+  --bg-panel: #06050c;
+  --surface: #18141f;
+  --surface-2: #211b29;
+  --surface-3: #2a2235;
+  --border: #302831;
+  --border-gold: #4a3520;
+  --gold: #ee9b3a;
+  --gold-dim: #8b5e2f;
+  --link: #c07830;
+  --text: #e7d1b1;
+  --text-dim: #b8a090;
+  --text-head: #f7f3e8;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --color-scrollbar: #5d142b;
+  --color-scrollbar-track: transparent;
+  --fallback-gradient-start: #090612;
+  --fallback-gradient-end: #131019;
+  --brand-youtube: #ff0033;
+  --brand-youtube-border: #990020;
+  --brand-youtube-hover: #ff334d;
+  --brand-gdoc: #3f69bb;
+  --brand-gdoc-border: #2d4c87;
+  --brand-gdoc-hover: #558fff;
+  --spell-school: #8fbc8f;
+}

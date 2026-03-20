@@ -1,0 +1,88 @@
+name: Hunter
+type: subclass
+folder: 4ZMAZcPYjyR6nhax
+img: modules/dnd-players-handbook/assets/icons/classes/hunter.webp
+system:
+  description:
+    value: >-
+      <blockquote><p>Protect Nature and People from
+      Destruction</p></blockquote><p>You stalk prey in the wilds and elsewhere,
+      using your abilities as a Hunter to protect nature and people everywhere
+      from forces that would destroy them.</p>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  identifier: hunter
+  classIdentifier: ranger
+  advancement:
+    - _id: wacj6x75L5ZaZUky
+      type: ItemGrant
+      configuration:
+        items:
+          - uuid: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrMarkoftheHu
+            optional: false
+          - uuid: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrHuntersLore
+            optional: false
+          - uuid: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrHuntersPrey
+            optional: false
+        optional: false
+        spell: null
+      value: {}
+      level: 3
+      title: Subclass Features
+    - _id: 4nA7C6uQhBJBtWdS
+      type: ItemGrant
+      configuration:
+        items:
+          - uuid: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrDefensiveTa
+            optional: false
+        optional: false
+        spell: null
+      value: {}
+      level: 7
+      title: Subclass Features
+    - _id: gBE1JZA0jf6dglQu
+      type: ItemGrant
+      configuration:
+        items:
+          - uuid: Compendium.dnd-players-handbook.classes.Item.phbrgrSuperiorHu
+            optional: false
+        optional: false
+        spell: null
+      value: {}
+      level: 11
+      title: Subclass Features
+    - _id: 1P4RbYyrzFoutFrj
+      type: ItemGrant
+      configuration:
+        items:
+          - uuid: Compendium.dnd-players-handbook.classes.Item.phbrgrSuperiorDe
+            optional: false
+        optional: false
+        spell: null
+      value: {}
+      level: 15
+      title: Subclass Features
+  spellcasting:
+    progression: none
+    ability: ''
+    preparation:
+      formula: ''
+effects: []
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180045131
+  modifiedTime: 1773508288581
+  lastModifiedBy: dnd5ebuilder0000
+ownership:
+  default: 0
+_id: ttrgrHunter00000
+sort: 112500
+_key: '!items!ttrgrHunter00000'

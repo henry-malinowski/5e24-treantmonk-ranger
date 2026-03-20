@@ -1,0 +1,215 @@
+name: Cordon of Arrows
+system:
+  description:
+    value: >-
+      <p>You touch up to four nonmagical Arrows or Bolts and plant them in the
+      ground in your space. Until the spell ends, the ammunition can’t be
+      physically uprooted, and whenever a creature other than you enters a space
+      within 30 feet of the ammunition for the first time on a turn or ends its
+      turn there, one piece of ammunition flies up to strike it.</p><p>The
+      creature takes [[/damage]] damage. The piece of ammunition is then
+      destroyed. The spell ends when none of the ammunition remains planted in
+      the ground.</p><p>When you cast this spell, you can designate any
+      creatures you choose, and the spell ignores them.</p><p><strong>Using a
+      Higher-Level Spell Slot.</strong> The damage increases by 1d8 for each
+      spell slot level above 2.</p><section class="secret"
+      id="secret-hTdxVas0HdLYLcC5"><p><strong>Foundry Note</strong></p><p>The
+      <strong>Cast</strong> activity will reset the limited uses of this item
+      according to how many pieces of ammunition are affected and can be fired
+      by the <strong>Damage </strong>activity.</p></section>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  activation:
+    type: action
+    condition: ''
+    value: null
+  duration:
+    value: '8'
+    units: hour
+  target:
+    affects:
+      type: object
+      count: '4'
+      choice: false
+      special: ''
+    template:
+      units: ft
+      contiguous: false
+      type: ''
+  range:
+    units: touch
+    special: ''
+  uses:
+    max: '4'
+    recovery: []
+    spent: 4
+  level: 2
+  school: trs
+  properties:
+    - vocal
+    - somatic
+    - material
+    - ritual
+  materials:
+    value: an ornamental braid
+    consumed: false
+    cost: 0
+    supply: 0
+  activities:
+    7FxhT4svBreaSOvk:
+      type: utility
+      _id: 7FxhT4svBreaSOvk
+      sort: 0
+      activation:
+        type: action
+        value: null
+        override: false
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets:
+          - type: itemUses
+            value: '-4'
+            target: ''
+            scaling:
+              mode: ''
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects: []
+      range:
+        override: false
+        units: self
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: sphere
+          size: '30'
+          count: ''
+        affects:
+          choice: true
+          count: ''
+          type: creature
+          special: ''
+        override: true
+        prompt: true
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      roll:
+        prompt: false
+        visible: false
+        name: ''
+        formula: ''
+      name: Cast
+      flags: {}
+      visibility:
+        level:
+          min: null
+          max: null
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+    pJS1chnqY5O4qQ56:
+      type: damage
+      _id: pJS1chnqY5O4qQ56
+      sort: 0
+      activation:
+        type: ''
+        override: true
+        condition: >-
+          whenever a creature other than you enters a space within 30 feet of
+          the ammunition
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: false
+        targets:
+          - type: itemUses
+            value: '1'
+            target: ''
+            scaling:
+              mode: ''
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: true
+      effects: []
+      flags: {}
+      range:
+        units: ft
+        override: true
+        special: ''
+        value: '30'
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          type: creature
+          count: '1'
+          special: ''
+        override: true
+        prompt: true
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      visibility:
+        level:
+          min: null
+          max: null
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+      damage:
+        critical:
+          allow: false
+        parts:
+          - custom:
+              enabled: false
+              formula: ''
+            number: 1
+            denomination: 8
+            bonus: ''
+            types:
+              - piercing
+            scaling:
+              mode: whole
+              number: 1
+      name: ''
+  identifier: cordon-of-arrows
+  method: spell
+  prepared: 0
+type: spell
+img: icons/skills/ranged/arrows-flying-salvo-yellow.webp
+effects: []
+folder: YEpbvnNafmzHmgE7
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180558526
+  modifiedTime: 1773180558526
+  lastModifiedBy: dnd5ebuilder0000
+ownership:
+  default: 0
+_id: ttsplCordonofArr
+sort: 100000
+_key: '!items!ttsplCordonofArr'

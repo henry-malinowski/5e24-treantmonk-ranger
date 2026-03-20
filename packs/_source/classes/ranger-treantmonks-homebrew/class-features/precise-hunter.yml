@@ -1,0 +1,90 @@
+_id: ttrgrPreciseHunt
+name: Precise Hunter
+type: feat
+folder: h5OUzaJcZzsNsOGc
+img: icons/skills/targeting/target-strike-triple-blue.webp
+system:
+  description:
+    value: >-
+      <p>You have Advantage on attack rolls.</p><section class="secret"
+      id="secret-uUGUCf1O5GmztrTG"><p><strong>Foundry Note</strong></p><p>This
+      feature includes an Active Effect which hints at Advantage on all attack
+      rolls.</p></section>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  uses:
+    max: ''
+    spent: 0
+    recovery: []
+  type:
+    value: class
+    subtype: ''
+  prerequisites:
+    level: 17
+    items: []
+    repeatable: false
+  properties:
+    - trait
+  requirements: ''
+  activities: {}
+  enchant: {}
+  identifier: precise-hunter
+  advancement: []
+  crewed: false
+effects:
+  - name: Precise Hunter
+    img: icons/skills/targeting/target-strike-triple-blue.webp
+    origin: Compendium.5e24-treantmonk-ranger.classes.Item.ttrgrPreciseHunt
+    _id: 0Cc9FuCB0iDqzr9A
+    type: base
+    system: {}
+    changes:
+      - key: flags.5e24-treantmonk-ranger.preciseHunter
+        mode: 5
+        value: 'true'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      combat: null
+      seconds: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>You have Advantage on attack rolls.</p>
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags:
+      dnd5e:
+        riders:
+          statuses: []
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.5
+      lastModifiedBy: dnd5ebuilder0000
+      modifiedTime: 1773186393441
+    _key: '!items.effects!ttrgrPreciseHunt.0Cc9FuCB0iDqzr9A'
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180112530
+  modifiedTime: 1773587137083
+  lastModifiedBy: dnd5ebuilder0000
+sort: 0
+ownership:
+  default: 0
+_key: '!items!ttrgrPreciseHunt'

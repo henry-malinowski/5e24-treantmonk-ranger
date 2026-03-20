@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "allowJs": true,
+    "noEmit": true,
+    "strict": true,
+    "module": "CommonJS",
+    "target": "ES2022",
+    "lib": ["ES2022"]
+  },
+  "include": ["_data/**/*.js", ".eleventy.js"]
+}

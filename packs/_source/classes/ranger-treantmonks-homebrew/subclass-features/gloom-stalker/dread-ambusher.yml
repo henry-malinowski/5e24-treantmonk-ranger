@@ -1,0 +1,319 @@
+name: Dread Ambusher
+type: feat
+folder: HQqTHeiSLTtEV8Y6
+img: icons/magic/nature/stealth-hide-eyes-pink.webp
+system:
+  description:
+    value: >-
+      <p>You have mastered the art of creating fearsome ambushes, granting you
+      the following benefits.</p><p><strong>Ambusher’s Leap.</strong> At the
+      start of your first turn of each combat, your Speed increases by 10 feet
+      until the end of that turn.</p><p><strong>Dreadful Strike.</strong> When
+      you attack a creature and hit it with a weapon, you can deal an extra 2d6
+      Psychic damage. You can use this benefit only once per turn, you can use
+      it a number of times equal to your Wisdom modifier (minimum of once), and
+      you regain all expended uses when you finish a Long
+      Rest.</p><p><strong>Initiative Bonus.</strong> When you roll Initiative,
+      you can add your Wisdom modifier to the roll.</p><section class="secret"
+      id="secret-QF11lzzOLRLzoSrk"><p><strong>Foundry Note</strong></p><p>This
+      feature includes an Active Effect which automatically adds your Wisdom
+      modifier to your Initiative roll.</p><p>The <strong>Ambusher's
+      Leap</strong> activity includes an Active Effect that can be used to
+      increase your Speed by 10 feet.</p></section>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  uses:
+    max: ''
+    spent: 0
+    recovery: []
+  type:
+    value: class
+    subtype: ''
+  prerequisites:
+    level: 3
+    items: []
+    repeatable: false
+  properties: []
+  requirements: ''
+  activities:
+    DMVf7FTyTC2HCAf9:
+      type: damage
+      name: Dreadful Strike
+      _id: DMVf7FTyTC2HCAf9
+      activation:
+        type: ''
+        value: null
+        override: false
+        condition: When you attack and hit a creature with a weapon
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets:
+          - type: activityUses
+            value: '1'
+            scaling: {}
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects: []
+      range:
+        override: false
+        units: self
+        special: ''
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          count: '1'
+          type: creature
+          special: ''
+        override: false
+        prompt: false
+      uses:
+        spent: 0
+        recovery:
+          - period: lr
+            type: recoverAll
+        max: (max(1,@abilities.wis.mod))
+      sort: 0
+      damage:
+        critical:
+          allow: false
+        parts:
+          - custom:
+              enabled: false
+              formula: '@scale.gloom.dreadful-strike'
+            number: 2
+            denomination: 6
+            bonus: ''
+            types:
+              - psychic
+            scaling:
+              number: 1
+      flags: {}
+      visibility:
+        level:
+          min: null
+          max: null
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+        identifier: ''
+    R5Vq2As7MZSnfYzL:
+      type: utility
+      name: Ambusher's Leap
+      _id: R5Vq2As7MZSnfYzL
+      activation:
+        type: ''
+        value: null
+        override: false
+        condition: At the start of your first turn of each combat
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets: []
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects:
+        - _id: MFog5fJxkSCrXOuY
+          level: {}
+      range:
+        override: false
+        units: self
+        special: ''
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          count: ''
+          type: self
+        override: false
+        prompt: false
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      sort: 100000
+      roll:
+        prompt: false
+        visible: false
+        name: ''
+        formula: ''
+      flags: {}
+      visibility:
+        level: {}
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+    eKcSHj1mOBDYNEZq:
+      type: damage
+      name: Stalker's Flurry (while Invisible)
+      _id: eKcSHj1mOBDYNEZq
+      sort: 0
+      activation:
+        type: ''
+        override: false
+        condition: When you attack and hit a creature with a weapon
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets: []
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects: []
+      flags: {}
+      range:
+        units: self
+        override: false
+        special: ''
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          type: creature
+          count: '1'
+          special: ''
+        override: false
+        prompt: true
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      visibility:
+        level:
+          min: 11
+          max: null
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+        identifier: tt-ranger
+      damage:
+        critical:
+          allow: false
+        parts:
+          - custom:
+              enabled: false
+              formula: ''
+            number: 2
+            denomination: 6
+            bonus: ''
+            types:
+              - psychic
+            scaling:
+              number: 1
+  enchant: {}
+  identifier: dread-ambusher
+  advancement: []
+  crewed: false
+effects:
+  - name: Dread Ambusher
+    img: icons/magic/nature/stealth-hide-eyes-pink.webp
+    _id: x1wPKl1K2XexAGkC
+    type: base
+    system: {}
+    changes:
+      - key: system.attributes.init.bonus
+        mode: 2
+        value: '@abilities.wis.mod'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    origin: null
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.5
+      lastModifiedBy: null
+    _key: '!items.effects!ttrgrDreadAmbush.x1wPKl1K2XexAGkC'
+  - name: Ambusher's Leap
+    img: icons/skills/movement/arrow-upward-yellow.webp
+    origin: Compendium.dnd-players-handbook.classes.Item.phbrgrDreadAmbus
+    transfer: false
+    _id: MFog5fJxkSCrXOuY
+    type: base
+    system: {}
+    changes:
+      - key: system.attributes.movement.walk
+        mode: 2
+        value: '10'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: 1
+      startRound: null
+      startTurn: null
+    description: ''
+    tint: '#ffffff'
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.5
+      lastModifiedBy: null
+    _key: '!items.effects!ttrgrDreadAmbush.MFog5fJxkSCrXOuY'
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180277200
+  modifiedTime: 1773180277200
+  lastModifiedBy: dnd5ebuilder0000
+ownership:
+  default: 0
+_id: ttrgrDreadAmbush
+sort: 106250
+_key: '!items!ttrgrDreadAmbush'

@@ -1,0 +1,210 @@
+_id: ttrgrNaturesVeil
+name: Nature's Veil
+type: feat
+folder: h5OUzaJcZzsNsOGc
+img: icons/magic/nature/leaf-armor-scale-green.webp
+system:
+  description:
+    value: >-
+      <p>You invoke spirits of nature to magically hide yourself. As a Bonus
+      Action, you can give yourself the Invisible condition until the end of
+      your next turn. You may extend your Nature’s Veil for another round by
+      taking an action to extend it, in which case it lasts until the end of
+      your next turn. You can maintain Nature’s Veil for up to 10
+      minutes.</p><p>You can use this feature a number of times equal to your
+      Wisdom modifier (minimum of once), and you regain all expended uses when
+      you finish a Long Rest.</p><section class="secret"
+      id="secret-CrVc4y9VaKTGeCuG"><p><strong>Foundry Note</strong></p><p>This
+      feature includes an Active Effect which applies the Invisible condition.
+      The extended veil applies the same Active Effect with a 10 minute
+      duration.</p></section>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+  uses:
+    max: max(1,@abilities.wis.mod)
+    spent: 0
+    recovery:
+      - period: lr
+        type: recoverAll
+  type:
+    value: class
+    subtype: ''
+  prerequisites:
+    level: 14
+    items: []
+    repeatable: false
+  properties: []
+  requirements: ''
+  activities:
+    E54BKGckr7WLLLqf:
+      type: utility
+      _id: E54BKGckr7WLLLqf
+      activation:
+        type: bonus
+        value: null
+        override: false
+        condition: ''
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets:
+          - type: itemUses
+            value: '1'
+            target: ''
+            scaling: {}
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects:
+        - _id: NOSQczI2MCQ5Ha8F
+          level: {}
+      range:
+        override: false
+        units: self
+        special: ''
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          count: ''
+          type: self
+          special: ''
+        override: false
+        prompt: false
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      sort: 0
+      roll:
+        prompt: false
+        visible: false
+        name: ''
+        formula: ''
+      name: Veil
+      flags: {}
+      visibility:
+        level: {}
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+    8dR4iiINcwyfoBIR:
+      type: utility
+      name: Extended Veil
+      _id: 8dR4iiINcwyfoBIR
+      sort: 0
+      activation:
+        type: action
+        override: false
+        condition: ''
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets: []
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects:
+        - _id: NOSQczI2MCQ5Ha8F
+          level: {}
+      flags: {}
+      range:
+        units: self
+        override: false
+        special: ''
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          type: self
+          special: ''
+        override: false
+        prompt: true
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      visibility:
+        level:
+          min: null
+          max: null
+        requireAttunement: false
+        requireIdentification: false
+        requireMagic: false
+        identifier: ''
+      roll:
+        prompt: false
+        visible: false
+        name: ''
+        formula: ''
+  enchant: {}
+  identifier: natures-veil
+  advancement: []
+  crewed: false
+effects:
+  - name: Veiled
+    img: icons/magic/nature/leaf-armor-scale-green.webp
+    origin: Compendium.dnd-players-handbook.classes.Item.phbrgrNaturesVei
+    transfer: true
+    _id: NOSQczI2MCQ5Ha8F
+    type: base
+    system: {}
+    changes: []
+    disabled: true
+    duration:
+      startTime: null
+      seconds: 600
+      combat: null
+      rounds: 100
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    tint: '#ffffff'
+    statuses:
+      - invisible
+    sort: 0
+    flags:
+      dnd5e:
+        riders:
+          statuses: []
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.351'
+      systemId: dnd5e
+      systemVersion: 5.2.5
+      lastModifiedBy: null
+    _key: '!items.effects!ttrgrNaturesVeil.NOSQczI2MCQ5Ha8F'
+flags: {}
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.351'
+  systemId: dnd5e
+  systemVersion: 5.2.5
+  createdTime: 1773180104922
+  modifiedTime: 1773587052324
+  lastModifiedBy: dnd5ebuilder0000
+sort: 0
+ownership:
+  default: 0
+_key: '!items!ttrgrNaturesVeil'
