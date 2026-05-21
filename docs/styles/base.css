@@ -72,7 +72,6 @@ body {
   padding: 3.75rem 1.5rem 0;
   text-align: center;
   overflow: hidden;
-  animation: fadeUp 0.7s ease both;
 
   &::after {
     content: "";
@@ -117,7 +116,6 @@ body {
   gap: 0.8rem;
   max-width: 280px;
   margin: 1.25rem auto;
-  animation: fadeUp 0.7s 0.3s ease both;
 
   &::before,
   &::after {
@@ -204,6 +202,7 @@ main {
 }
 
 .manifest-copy-btn {
+  flex: 0 0 5.4rem;
   background: var(--surface-3);
   border: 1px solid var(--border-gold);
   border-radius: 5px;
@@ -212,11 +211,16 @@ main {
   padding: 0.45rem 0.85rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
   font-size: 0.78rem;
   font-family: "Signika", sans-serif;
   white-space: nowrap;
-  transition: all var(--transition);
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    color var(--transition),
+    box-shadow var(--transition);
 
   &:hover {
     border-color: var(--gold-dim);
@@ -224,8 +228,17 @@ main {
   }
 
   &.copied {
+    background: rgba(92, 184, 92, 0.08);
     border-color: #3d8b40;
     color: #5cb85c;
+    box-shadow:
+      0 0 0 1px rgba(92, 184, 92, 0.08),
+      0 0 16px rgba(92, 184, 92, 0.08);
+    animation: copyConfirm 0.34s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  &.copied i {
+    animation: copyIconConfirm 0.34s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 }
 
@@ -235,6 +248,14 @@ main {
   text-align: center;
   color: var(--text-dim);
   font-size: 0.88rem;
+
+  .site-title,
+  .ornament,
+  .site-subtitle {
+    opacity: 0;
+    animation: fadeUp 0.26s ease forwards;
+    animation-delay: calc(var(--intro-order) * 0.035s);
+  }
 
   p {
     line-height: 1.75;
@@ -248,5 +269,27 @@ main {
   ul {
     list-style: none;
     line-height: 2;
+  }
+}
+
+@keyframes copyConfirm {
+  from {
+    transform: translateY(1px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes copyIconConfirm {
+  from {
+    opacity: 0.45;
+    transform: scale(0.72);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

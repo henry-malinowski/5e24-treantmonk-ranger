@@ -6,10 +6,12 @@ const heroPlugin = require("../scripts/md-hero-plugin");
 md.use(diffPlugin);
 md.use(heroPlugin);
 
+let ornamentIndex = 0;
+
 // # h1 → <header class="site-header"><h1 class="site-title">
 md.renderer.rules.heading_open = function (tokens, idx) {
   if (tokens[idx].tag === "h1")
-    return '<header class="site-header"><h1 class="site-title">';
+    return '<header class="site-header"><h1 class="site-title" style="--intro-order: 0">';
   return md.renderer.renderToken(tokens, idx, md.options);
 };
 md.renderer.rules.heading_close = function (tokens, idx) {
@@ -27,6 +29,7 @@ md.core.ruler.push("subtitle_flag", (state) => {
     }
     if (sawH1 && token.type === "paragraph_open") {
       token.attrSet("class", "site-subtitle");
+      token.attrSet("style", "--intro-order: 2");
       break;
     }
   }
@@ -34,10 +37,13 @@ md.core.ruler.push("subtitle_flag", (state) => {
 
 // --- → ornament divider
 md.renderer.rules.hr = function () {
-  return '<div class="ornament"><i class="fa-solid fa-diamond ornament-icon"></i></div>\n';
+  const order = ornamentIndex * 2 + 1;
+  ornamentIndex += 1;
+  return `<div class="ornament" style="--intro-order: ${order}"><i class="fa-solid fa-diamond ornament-icon"></i></div>\n`;
 };
 
 module.exports = function () {
+  ornamentIndex = 0;
   const raw = fs.readFileSync(path.join(__dirname, "intro.md"), "utf8");
   return md.render(raw);
 };

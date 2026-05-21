@@ -11,9 +11,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
   <link rel="manifest" href="favicon/site.webmanifest">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
   <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/diff.css">
 </head>
 <body>
 
@@ -26,7 +24,7 @@
   <div class="card-grid" id="card-grid">
     {% for card in cards %}
     {% if card.id === 'spells' %}
-    <article class="module-card module-card--banner" style="animation-delay: {{ loop.index0 * 0.05 + 0.42 }}s" data-index="{{ loop.index0 }}">
+    <article class="module-card module-card--banner" style="animation-delay: {{ loop.index0 * 50 + 420 }}ms" data-index="{{ loop.index0 }}">
       <i class="fa-solid fa-diamond card-banner-gem"></i>
       <div class="card-name">{{ card.name }}</div>
       {% if card.subtitle %}
@@ -34,7 +32,7 @@
       {% endif %}
     </article>
     {% else %}
-    <article class="module-card" style="animation-delay: {{ loop.index0 * 0.05 + 0.42 }}s" data-index="{{ loop.index0 }}">
+    <article class="module-card" style="animation-delay: {{ loop.index0 * 50 + 420 }}ms" data-index="{{ loop.index0 }}">
       {% if card.image %}
       <img src="{{ card.image }}" alt="{{ card.name }}" loading="lazy">
       {% else %}

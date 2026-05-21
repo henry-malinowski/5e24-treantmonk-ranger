@@ -18,20 +18,31 @@
 
 /* Modal shell */
 .modal {
+  position: relative;
   background: var(--surface);
-  border: 1px solid var(--border);
-  border-top: 2px solid var(--gold-dim);
   border-radius: var(--radius-lg);
   width: 100%;
   max-width: 780px;
   max-height: 90vh;
   display: flex;
   flex-direction: column;
-  animation: modalIn 0.3s cubic-bezier(0.34, 1.4, 0.64, 1) both;
+  animation: modalIn 0.24s cubic-bezier(0.22, 1, 0.36, 1) both;
   box-shadow:
     0 24px 80px rgba(0, 0, 0, 0.8),
-    0 0 60px rgba(238, 155, 58, 0.05);
+    0 0 60px rgba(238, 155, 58, 0.015);
   overflow: hidden;
+}
+
+.modal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gold-dim);
+  opacity: 0.82;
+  pointer-events: none;
 }
 
 .modal-close-bar {
@@ -64,6 +75,7 @@
 }
 
 .modal-scroll {
+  position: relative;
   overflow-y: auto;
   flex: 1;
   scrollbar-width: thin;
@@ -81,6 +93,26 @@
     background: var(--color-scrollbar);
     border-radius: 99px;
   }
+}
+
+.modal-scroll::after {
+  content: "";
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  height: 2.3rem;
+  margin-top: -2.3rem;
+  background: linear-gradient(0deg, rgba(24, 20, 31, 0.98), rgba(24, 20, 31, 0));
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+
+.modal.has-scroll-below .modal-scroll::after {
+  opacity: 1;
 }
 
 .modal-inner {
@@ -455,10 +487,10 @@
   min-width: 200px;
   background: var(--surface-2);
   border: 1px solid var(--border);
-  border-top: 2px solid var(--gold-dim);
   border-radius: var(--radius);
   padding: 0.75rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
   pointer-events: none;
   font-size: 0.8rem;
   line-height: 1.45;
@@ -467,6 +499,18 @@
   &.spell-tooltip--pinned {
     pointer-events: auto;
   }
+}
+
+.spell-tooltip::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gold-dim);
+  opacity: 0.82;
+  pointer-events: none;
 }
 
 .spell-tooltip-header {
@@ -570,5 +614,10 @@
     &:first-child {
       margin-top: 0;
     }
+  }
+
+  strong {
+    color: var(--text-head);
+    font-weight: 600;
   }
 }

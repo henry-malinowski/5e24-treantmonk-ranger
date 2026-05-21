@@ -74,6 +74,16 @@ document.addEventListener("click", closeAllDropdowns);
   const btn = document.getElementById("manifest-copy-btn");
   if (!input || !btn) return;
 
+  function selectManifestUrl() {
+    input.select();
+  }
+
+  input.addEventListener("focus", selectManifestUrl);
+  input.addEventListener("click", selectManifestUrl);
+  input.addEventListener("mouseup", function (e) {
+    e.preventDefault();
+  });
+
   btn.addEventListener("click", function () {
     const text = input.value;
 

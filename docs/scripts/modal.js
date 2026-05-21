@@ -10,6 +10,7 @@ export function createModalController(options) {
 
   const backdrop = document.getElementById("modal-backdrop");
   const modalEl = document.getElementById("modal");
+  const modalScroll = modalEl.querySelector(".modal-scroll");
   const modalTitle = document.getElementById("modal-title");
   const modalSubtitle = document.getElementById("modal-subtitle");
   const modalHero = document.getElementById("modal-hero");
@@ -58,13 +59,15 @@ export function createModalController(options) {
     history.replaceState(null, "", "#" + card.id);
     backdrop.classList.add("open");
     document.body.style.overflow = "hidden";
-    modalEl.querySelector(".modal-scroll").scrollTop = 0;
+    modalScroll.scrollTop = 0;
+    requestAnimationFrame(updateModalScrollState);
   }
 
   function closeModal() {
     history.replaceState(null, "", location.pathname + location.search);
     backdrop.classList.remove("open");
     document.body.style.overflow = "";
+    modalEl.classList.remove("is-scrollable", "has-scroll-below");
   }
 
   function stepModal(delta) {
@@ -85,6 +88,15 @@ export function createModalController(options) {
   function prefetchCardImage(index) {
     const card = cards[index];
     if (card && card.image) new Image().src = card.image;
+  }
+
+  function updateModalScrollState() {
+    const scrollMax = modalScroll.scrollHeight - modalScroll.clientHeight;
+    const isScrollable = scrollMax > 1;
+    const hasScrollBelow = isScrollable && modalScroll.scrollTop < scrollMax - 1;
+
+    modalEl.classList.toggle("is-scrollable", isScrollable);
+    modalEl.classList.toggle("has-scroll-below", hasScrollBelow);
   }
 
   function prefetchNearNavButtons(mouseEvent) {
@@ -124,6 +136,8 @@ export function createModalController(options) {
   backdrop.addEventListener("click", function (e) {
     if (e.target === backdrop) closeModal();
   });
+  modalScroll.addEventListener("scroll", updateModalScrollState);
+  window.addEventListener("resize", updateModalScrollState);
   backdrop.addEventListener("mousemove", prefetchNearNavButtons);
 
   return {
