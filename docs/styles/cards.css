@@ -65,12 +65,6 @@
     text-shadow: none;
   }
 
-  .card-banner-gem {
-    font-size: 0.55rem;
-    color: var(--gold-dim);
-    margin-bottom: 0.2rem;
-  }
-
   &:hover {
     transform: none;
     border-color: var(--gold);
@@ -130,7 +124,7 @@
 
 .card-subtitle {
   font-family: "Signika", sans-serif;
-  font-size: 0.68rem;
+  font-size: var(--font-card-subtitle);
   font-weight: 300;
   color: rgba(255, 255, 255, 0.72);
   font-style: italic;

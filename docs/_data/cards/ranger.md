@@ -13,7 +13,7 @@ ytLinks:
     url: https://youtu.be/z_XVH-P_5Nw
 ---
 
-![Ranger](images/ranger/ranger.webp "left 40% | Chris Rallis 2% 15%")
+![Ranger](images/ranger/ranger.webp "right 33% | Chris Rallis 2% 15%")
 
 ## Level 1: Spellcasting
 

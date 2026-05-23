@@ -65,7 +65,7 @@
 
 .diff-toggle-label {
   font-family: "Modesto Condensed", serif;
-  font-size: 0.78rem;
+  font-size: var(--font-ui-sm);
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;

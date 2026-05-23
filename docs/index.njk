@@ -25,7 +25,6 @@
     {% for card in cards %}
     {% if card.id === 'spells' %}
     <article class="module-card module-card--banner" style="animation-delay: {{ loop.index0 * 50 + 420 }}ms" data-index="{{ loop.index0 }}">
-      <i class="fa-solid fa-diamond card-banner-gem"></i>
       <div class="card-name">{{ card.name }}</div>
       {% if card.subtitle %}
       <div class="card-subtitle">{{ card.subtitle }}</div>
@@ -60,8 +59,9 @@
     </div>
     <div class="manifest-block">
       <input class="manifest-input" id="manifest-input" type="text" readonly spellcheck="false"
+        aria-label="Foundry VTT manifest URL"
         value="https://github.com/henry-malinowski/5e24-treantmonk-ranger/releases/latest/download/module.json">
-      <button class="manifest-copy-btn" id="manifest-copy-btn">
+      <button class="manifest-copy-btn" id="manifest-copy-btn" aria-label="Copy Foundry VTT manifest URL">
         <i class="fa-regular fa-copy"></i>
         <span>Copy</span>
       </button>
@@ -95,7 +95,7 @@
   </button>
   <div class="modal" id="modal">
     <div class="modal-close-bar">
-      <label class="diff-toggle" id="diff-toggle" hidden title="Show PHB 2024 text">
+      <label class="diff-toggle" id="diff-toggle" hidden title="Show PHB 2024 text" aria-label="Show PHB 2024 text">
         <span class="diff-toggle-label">PHB</span>
         <span class="diff-toggle-track">
           <input type="checkbox" id="diff-toggle-input">

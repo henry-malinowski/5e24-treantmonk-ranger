@@ -101,8 +101,8 @@ body {
 }
 
 .site-subtitle {
-  color: var(--text-dim);
-  font-size: 0.88rem;
+  color: var(--text);
+  font-size: var(--font-ui-md);
   line-height: 1.75;
   margin: 0.5rem auto 0;
   max-width: 640px;
@@ -160,7 +160,7 @@ main {
 
 .manifest-label {
   font-family: "Modesto Condensed", serif;
-  font-size: 0.72rem;
+  font-size: var(--font-ui-xs);
   font-weight: 600;
   color: var(--gold);
   letter-spacing: 0.18em;
@@ -189,7 +189,7 @@ main {
   font-family:
     "JetBrains Mono", "Cascadia Code", "Fira Code", "Consolas", "Courier New",
     monospace;
-  font-size: 0.78rem;
+  font-size: var(--font-ui-sm);
   padding: 0.55rem 1rem;
   outline: none;
   opacity: 1;
@@ -213,7 +213,7 @@ main {
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  font-size: 0.78rem;
+  font-size: var(--font-ui-sm);
   font-family: "Signika", sans-serif;
   white-space: nowrap;
   transition:
@@ -247,7 +247,7 @@ main {
   margin: 0 auto 2.5rem;
   text-align: center;
   color: var(--text-dim);
-  font-size: 0.88rem;
+  font-size: var(--font-ui-md);
 
   .site-title,
   .ornament,

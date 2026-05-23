@@ -1,623 +1,701 @@
 /* Modal backdrop */
 .modal-backdrop {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 900;
-  background: rgba(4, 3, 9, 0.88);
-  backdrop-filter: blur(6px);
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 900;
+    background: rgba(4, 3, 9, 0.88);
+    backdrop-filter: blur(6px);
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
 
-  &.open {
-    display: flex;
-    animation: backdropIn 0.2s ease both;
-  }
+    &.open {
+        display: flex;
+        animation: backdropIn 0.2s ease both;
+    }
 }
 
 /* Modal shell */
 .modal {
-  position: relative;
-  background: var(--surface);
-  border-radius: var(--radius-lg);
-  width: 100%;
-  max-width: 780px;
-  max-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  animation: modalIn 0.24s cubic-bezier(0.22, 1, 0.36, 1) both;
-  box-shadow:
-    0 24px 80px rgba(0, 0, 0, 0.8),
-    0 0 60px rgba(238, 155, 58, 0.015);
-  overflow: hidden;
+    position: relative;
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 780px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    animation: modalIn 0.24s cubic-bezier(0.22, 1, 0.36, 1) both;
+    box-shadow:
+        0 24px 80px rgba(0, 0, 0, 0.8),
+        0 0 60px rgba(238, 155, 58, 0.015);
+    overflow: hidden;
 }
 
 .modal::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--gold-dim);
-  opacity: 0.82;
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--gold-dim);
+    opacity: 0.82;
+    pointer-events: none;
 }
 
 .modal-close-bar {
-  flex-shrink: 0;
-  display: flex;
-  justify-content: flex-end;
-  padding: 0.75rem 0.85rem 0;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.75rem 0.85rem 0;
 }
 
 .modal-close {
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  color: var(--text-dim);
-  cursor: pointer;
-  width: 34px;
-  height: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.88rem;
-  transition:
-    border-color var(--transition),
-    color var(--transition);
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-dim);
+    cursor: pointer;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.88rem;
+    transition:
+        border-color var(--transition),
+        color var(--transition);
 
-  &:hover {
-    border-color: var(--gold-dim);
-    color: var(--gold);
-  }
+    &:hover {
+        border-color: var(--gold-dim);
+        color: var(--gold);
+    }
 }
 
 .modal-scroll {
-  position: relative;
-  overflow-y: auto;
-  flex: 1;
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-scrollbar) var(--color-scrollbar-track);
+    position: relative;
+    overflow-y: auto;
+    flex: 1;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-scrollbar) var(--color-scrollbar-track);
 
-  &::-webkit-scrollbar {
-    width: 5px;
-  }
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
 
-  &::-webkit-scrollbar-track {
-    background: var(--color-scrollbar-track);
-  }
+    &::-webkit-scrollbar-track {
+        background: var(--color-scrollbar-track);
+    }
 
-  &::-webkit-scrollbar-thumb {
-    background: var(--color-scrollbar);
-    border-radius: 99px;
-  }
+    &::-webkit-scrollbar-thumb {
+        background: var(--color-scrollbar);
+        border-radius: 99px;
+    }
 }
 
 .modal-scroll::after {
-  content: "";
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  display: block;
-  height: 2.3rem;
-  margin-top: -2.3rem;
-  background: linear-gradient(0deg, rgba(24, 20, 31, 0.98), rgba(24, 20, 31, 0));
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity var(--transition);
+    content: "";
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    height: 2.3rem;
+    margin-top: -2.3rem;
+    background: linear-gradient(
+        0deg,
+        rgba(24, 20, 31, 0.98),
+        rgba(24, 20, 31, 0)
+    );
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition);
 }
 
 .modal.has-scroll-below .modal-scroll::after {
-  opacity: 1;
+    opacity: 1;
 }
 
 .modal-inner {
-  padding: 1rem 1.75rem 1.75rem;
+    padding: 1rem 2.5rem 1.75rem;
 }
 
 .modal-title {
-  font-family: "Modesto Condensed", serif;
-  font-size: clamp(1.6rem, 4vw, 2.2rem);
-  font-weight: 700;
-  color: var(--text-head);
-  line-height: 1.25;
-  margin-bottom: 0;
+    font-family: "Modesto Condensed", serif;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 700;
+    color: var(--text-head);
+    line-height: 1.25;
+    margin-bottom: 0;
 }
 
 .modal-subtitle {
-  font-family: "Signika", sans-serif;
-  font-size: 0.82rem;
-  font-weight: 300;
-  color: var(--text-dim);
-  font-style: italic;
-  margin-top: 0.2rem;
-  line-height: 1.4;
+    font-family: "Signika", sans-serif;
+    font-size: var(--font-ui-md);
+    font-weight: 300;
+    color: var(--text-dim);
+    font-style: italic;
+    margin-top: 0.2rem;
+    line-height: 1.4;
 }
 
 .modal-title-row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 1.1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.1rem;
 
-  .modal-title-group {
-    flex: 1;
-    min-width: 0;
-  }
+    .modal-title-group {
+        flex: 1;
+        min-width: 0;
+    }
 }
 
 .modal-link-btns {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  flex-shrink: 0;
-  padding-top: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-shrink: 0;
+    padding-top: 0.25rem;
 }
 
 .modal-icon-btn {
-  --icon-color: var(--text-dim);
-  --icon-hover-border: var(--gold-dim);
-  --icon-hover-color: var(--gold);
-  width: 34px;
-  height: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  border: 1px solid var(--border);
-  background: var(--surface-2);
-  cursor: pointer;
-  text-decoration: none;
-  transition: all var(--transition);
-  flex-shrink: 0;
-  color: var(--icon-color);
+    --icon-color: var(--text-dim);
+    --icon-hover-border: var(--gold-dim);
+    --icon-hover-color: var(--gold);
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    border: 1px solid var(--border);
+    background: var(--surface-2);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all var(--transition);
+    flex-shrink: 0;
+    color: var(--icon-color);
 
-  &:hover {
-    border-color: var(--icon-hover-border);
-    color: var(--icon-hover-color);
-  }
+    &:hover {
+        border-color: var(--icon-hover-border);
+        color: var(--icon-hover-color);
+    }
 
-  &.modal-icon-btn--gdoc {
-    --icon-color: var(--brand-gdoc);
-    --icon-hover-border: var(--brand-gdoc-border);
-    --icon-hover-color: var(--brand-gdoc-hover);
-  }
+    &.modal-icon-btn--gdoc {
+        --icon-color: var(--brand-gdoc);
+        --icon-hover-border: var(--brand-gdoc-border);
+        --icon-hover-color: var(--brand-gdoc-hover);
+    }
 
-  &.modal-icon-btn--youtube {
-    --icon-color: var(--brand-youtube);
-    --icon-hover-border: var(--brand-youtube-border);
-    --icon-hover-color: var(--brand-youtube-hover);
-  }
+    &.modal-icon-btn--youtube {
+        --icon-color: var(--brand-youtube);
+        --icon-hover-border: var(--brand-youtube-border);
+        --icon-hover-color: var(--brand-youtube-hover);
+    }
 }
 
 .modal-icon-dropdown {
-  position: relative;
+    position: relative;
 }
 
 .modal-dropdown-menu {
-  position: absolute;
-  top: calc(100% + 0.4rem);
-  right: 0;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  min-width: 240px;
-  z-index: 10;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: calc(100% + 0.4rem);
+    right: 0;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    min-width: 240px;
+    z-index: 10;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 
-  a {
-    display: block;
-    padding: 0.75rem 1rem;
-    font-size: 0.85rem;
-    color: var(--text);
-    text-decoration: none;
-    transition:
-      background var(--transition),
-      color var(--transition);
+    a {
+        display: block;
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+        color: var(--text);
+        text-decoration: none;
+        transition:
+            background var(--transition),
+            color var(--transition);
 
-    &:hover {
-      background: var(--surface-3);
-      color: var(--text-head);
+        &:hover {
+            background: var(--surface-3);
+            color: var(--text-head);
+        }
     }
-  }
 
-  a + a {
-    border-top: 1px solid var(--border);
-  }
+    a + a {
+        border-top: 1px solid var(--border);
+    }
 }
 
 /* Inline hero — floated character art within the description text flow.
    Float, width, and margin are set via inline styles by md-hero-plugin. */
 .modal-inline-hero {
-  height: auto;
-  display: block;
+    height: auto;
+    display: block;
 }
 
 /* Wrapper for inline hero images with an artist credit overlay. */
 .modal-inline-hero-wrap {
-  position: relative;
+    position: relative;
 
-  > .modal-inline-hero {
-    float: none;
-    width: 100%;
-    margin: 0;
-  }
+    > .modal-inline-hero {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
 }
 
 .modal-hero-credit {
-  position: absolute;
-  bottom: 0.4rem;
-  right: 0.5rem;
-  font-size: 0.6rem;
-  color: rgba(255, 255, 255, 0.4);
-  letter-spacing: 0.04em;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
-  pointer-events: none;
+    position: absolute;
+    bottom: 0.4rem;
+    right: 0.5rem;
+    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.04em;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    pointer-events: none;
 }
 
 .modal-hero {
-  width: calc(100% + 3.5rem);
-  margin: 0 -1.75rem;
-  aspect-ratio: 16 / 7;
-  overflow: hidden;
-  background: var(--bg-deep);
-  position: relative;
+    width: calc(100% + 5rem);
+    margin: 0 -2.5rem;
+    aspect-ratio: 16 / 7;
+    overflow: hidden;
+    background: var(--bg-deep);
+    position: relative;
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
 
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      0deg,
-      rgba(11, 10, 19, 0.45) 0%,
-      transparent 40%
-    );
-    pointer-events: none;
-  }
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            0deg,
+            rgba(11, 10, 19, 0.45) 0%,
+            transparent 40%
+        );
+        pointer-events: none;
+    }
 }
 
 .modal-hero-fallback {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(
-    135deg,
-    var(--fallback-gradient-start),
-    var(--fallback-gradient-end)
-  );
-  color: var(--border);
-  font-size: 3rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        135deg,
+        var(--fallback-gradient-start),
+        var(--fallback-gradient-end)
+    );
+    color: var(--border);
+    font-size: 3rem;
 }
 
 .modal-hero-credit {
-  position: absolute;
-  bottom: 0.45rem;
-  right: 0.65rem;
-  font-size: 0.6rem;
-  color: rgba(255, 255, 255, 0.5);
-  letter-spacing: 0.03em;
-  pointer-events: none;
-  z-index: 2;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0.45rem;
+    right: 0.65rem;
+    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.03em;
+    pointer-events: none;
+    z-index: 2;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .modal-body {
-  padding-top: 0.25rem;
+    padding-top: 0.1rem;
 }
 
 /* Feature content — the primary modal content */
 /* Spell entry styles live in spells.css */
 
 .modal-description {
-  h2 {
-    font-family: "Modesto Condensed", serif;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--gold);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin: 1.5rem 0 0.75rem;
+    h2 {
+        font-family: "Modesto Condensed", serif;
+        font-size: var(--font-content-heading);
+        font-weight: 600;
+        color: var(--gold);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin: 1.5rem 0 0.5rem;
 
-    &::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: var(--border);
+        &::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
     }
 
-    &:first-child {
-      margin-top: 0;
+    h3 {
+        font-family: "Modesto Condensed", serif;
+        font-size: var(--font-ui-md);
+        font-weight: 600;
+        color: var(--gold-dim);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin: 1.1rem 0 0.5rem;
     }
-  }
-
-  h3 {
-    font-family: "Modesto Condensed", serif;
-    font-size: 0.88rem;
-    font-weight: 600;
-    color: var(--gold-dim);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin: 1.1rem 0 0.5rem;
-  }
-
-  p {
-    font-size: 0.88rem;
-    color: var(--text);
-    line-height: 1.7;
-    margin-bottom: 0.75rem;
-  }
-
-  ul,
-  ol {
-    padding-left: 1.4rem;
-    margin-bottom: 0.75rem;
-  }
-
-  li {
-    font-size: 0.88rem;
-    color: var(--text);
-    line-height: 1.7;
-    margin-bottom: 0.3rem;
-  }
-
-  strong {
-    color: var(--text-head);
-    font-weight: 600;
-  }
-
-  blockquote {
-    border-left: 2px solid var(--gold-dim);
-    padding: 0.4rem 0.9rem;
-    margin: 0 0 0.75rem;
-    color: var(--text-dim);
-    font-style: italic;
 
     p {
-      margin-bottom: 0;
-      font-size: 0.85rem;
+        font-size: var(--font-content-md);
+        color: var(--text);
+        line-height: var(--line-content);
+        margin-bottom: 0.75rem;
     }
-  }
 
-  table {
-    width: 50%;
-    min-width: min-content;
-    max-width: 100%;
-    border-collapse: collapse;
-    margin: 0 auto 1rem;
-    font-size: 0.84rem;
-  }
-
-  th {
-    text-align: left;
-    padding: 0.45rem 0.75rem;
-    font-family: "Modesto Condensed", serif;
-    font-size: 0.72rem;
-    font-weight: 600;
-    color: var(--gold);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    border-bottom: 1px solid var(--border);
-  }
-
-  td {
-    padding: 0.45rem 0.75rem;
-    color: var(--text);
-    border-bottom: 1px solid var(--border);
-
-    &:first-child {
-      color: var(--text-dim);
-      font-size: 0.8rem;
+    ul,
+    ol {
+        padding-left: 1.4rem;
+        margin-bottom: 0.75rem;
     }
-  }
 
-  tr:last-child td {
-    border-bottom: none;
-  }
+    li {
+        font-size: var(--font-content-md);
+        color: var(--text);
+        line-height: var(--line-content);
+        margin-bottom: 0.3rem;
+    }
+
+    strong {
+        color: var(--text-head);
+        font-weight: 600;
+    }
+
+    blockquote {
+        border-left: 2px solid var(--gold-dim);
+        padding: 0.4rem 0.9rem;
+        margin: 0 0 0.75rem;
+        color: var(--text-dim);
+        font-style: italic;
+
+        p {
+            margin-bottom: 0;
+            font-size: 0.85rem;
+        }
+    }
+
+    table {
+        width: 50%;
+        min-width: min-content;
+        max-width: 100%;
+        border-collapse: collapse;
+        margin: 0 auto 1rem;
+        font-size: 0.95rem;
+    }
+
+    th {
+        text-align: left;
+        padding: 0.45rem 0.75rem;
+        font-family: "Modesto Condensed", serif;
+        font-weight: 600;
+        color: var(--gold);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--border);
+    }
+
+    td {
+        padding: 0.45rem 0.75rem;
+        color: var(--text);
+        border-bottom: 1px solid var(--border);
+
+        &:first-child {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+    }
+
+    tr:last-child td {
+        border-bottom: none;
+    }
 }
 
 .modal-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  color: var(--text-dim);
-  font-size: 1rem;
-  cursor: pointer;
-  transition:
-    border-color var(--transition),
-    color var(--transition);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-dim);
+    font-size: 1rem;
+    cursor: pointer;
+    transition:
+        border-color var(--transition),
+        color var(--transition);
 
-  &:hover {
-    border-color: var(--gold-dim);
-    color: var(--gold);
-  }
+    &:hover {
+        border-color: var(--gold-dim);
+        color: var(--gold);
+    }
 }
 
 .modal-nav-prev {
-  left: 1.25rem;
+    left: 1.25rem;
 }
 
 .modal-nav-next {
-  right: 1.25rem;
+    right: 1.25rem;
 }
 
 /* ─── Spell tooltips ───────────────────────────────────────────────────────── */
 
 .spell-ref {
-  color: var(--text-head);
-  border-bottom: 1px dotted var(--gold-dim);
-  cursor: help;
+    color: var(--text-head);
+    border-bottom: 1px dotted var(--gold-dim);
+    cursor: help;
 
-  &:hover {
-    color: var(--gold);
-    border-bottom-color: var(--gold);
-  }
+    &:hover {
+        color: var(--gold);
+        border-bottom-color: var(--gold);
+    }
 }
 
 .spell-tooltip {
-  position: absolute;
-  z-index: 1000;
-  max-width: 320px;
-  min-width: 200px;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 0.75rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
-  overflow: hidden;
-  pointer-events: none;
-  font-size: 0.8rem;
-  line-height: 1.45;
-  color: var(--text);
+    position: absolute;
+    z-index: 1000;
+    max-width: 380px;
+    min-width: 260px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.95rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+    max-height: calc(100vh - 1rem);
+    overflow-y: auto;
+    pointer-events: none;
+    font-size: var(--font-tooltip-body);
+    line-height: var(--line-tooltip-body);
+    color: var(--text);
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-scrollbar) var(--color-scrollbar-track);
 
-  &.spell-tooltip--pinned {
-    pointer-events: auto;
-  }
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--color-scrollbar-track);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--color-scrollbar);
+        border-radius: 99px;
+    }
+
+    &.spell-tooltip--pinned {
+        pointer-events: auto;
+    }
+}
+
+.spell-tooltip-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: rgba(4, 3, 9, 0.58);
+    backdrop-filter: blur(3px);
+    animation: spellTooltipBackdropIn 0.18s ease-out both;
+    touch-action: none;
+}
+
+.spell-tooltip-backdrop--closing {
+    animation: spellTooltipBackdropOut 0.14s ease-in both;
 }
 
 .spell-tooltip::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--gold-dim);
-  opacity: 0.82;
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--gold-dim);
+    opacity: 0.82;
+    pointer-events: none;
+}
+
+@keyframes spellTooltipBackdropIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spellTooltipBackdropOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes spellTooltipTrayIn {
+    from {
+        opacity: 0;
+        transform: translateY(calc(-50% + 1.25rem));
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes spellTooltipTrayOut {
+    from {
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(calc(-50% + 1rem));
+    }
 }
 
 .spell-tooltip-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .spell-tooltip-name {
-  font-family: "Modesto Condensed", serif;
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--text-head);
-  line-height: 1.2;
+    font-family: "Modesto Condensed", serif;
+    font-size: var(--font-tooltip-title);
+    font-weight: 600;
+    color: var(--text-head);
+    line-height: 1.2;
 }
 
 .spell-tooltip-level-school {
-  font-size: 0.8rem;
-  font-style: italic;
-  color: var(--text-dim);
-  margin-top: 0.1rem;
+    font-size: var(--font-tooltip-meta);
+    font-style: italic;
+    color: var(--text-dim);
+    margin-top: 0.1rem;
 }
 
 .spell-tooltip-school-icon {
-  display: block;
-  flex-shrink: 0;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-top: 0.1rem;
-  mask-size: contain;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  background-color: var(--gold);
-  opacity: 0.6;
+    display: block;
+    flex-shrink: 0;
+    width: 1.65rem;
+    height: 1.65rem;
+    margin-top: 0.1rem;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: var(--gold);
+    opacity: 0.6;
 }
 
 .spell-tooltip.spell-school--abjuration .spell-tooltip-school-icon {
-  mask-image: url("../images/schools/abjuration.svg");
+    mask-image: url("../images/schools/abjuration.svg");
 }
 .spell-tooltip.spell-school--conjuration .spell-tooltip-school-icon {
-  mask-image: url("../images/schools/conjuration.svg");
+    mask-image: url("../images/schools/conjuration.svg");
 }
 .spell-tooltip.spell-school--divination .spell-tooltip-school-icon {
-  mask-image: url("../images/schools/divination.svg");
+    mask-image: url("../images/schools/divination.svg");
 }
 .spell-tooltip.spell-school--enchantment .spell-tooltip-school-icon {
-  mask-image: url("../images/schools/enchantment.svg");
+    mask-image: url("../images/schools/enchantment.svg");
 }
 .spell-tooltip.spell-school--evocation .spell-tooltip-school-icon {
-  mask-image: url("../images/schools/evocation.svg");
+    mask-image: url("../images/schools/evocation.svg");
 }
 .spell-tooltip.spell-school--illusion .spell-tooltip-school-icon {
-  mask-image: url("../images/schools/illusion.svg");
+    mask-image: url("../images/schools/illusion.svg");
 }
 .spell-tooltip.spell-school--necromancy .spell-tooltip-school-icon {
-  mask-image: url("../images/schools/necromancy.svg");
+    mask-image: url("../images/schools/necromancy.svg");
 }
 .spell-tooltip.spell-school--transmutation .spell-tooltip-school-icon {
-  mask-image: url("../images/schools/transmutation.svg");
+    mask-image: url("../images/schools/transmutation.svg");
 }
 
 .spell-tooltip-details {
-  margin: 0 0 0.5rem;
-  padding: 0.4rem 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  font-size: 0.82rem;
-  line-height: 1.6;
+    margin: 0 0 0.5rem;
+    padding: 0.4rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    font-size: var(--font-tooltip-meta);
+    line-height: var(--line-tooltip-details);
 
-  dt {
-    display: inline;
-    font-weight: 600;
-    color: var(--text-head);
+    dt {
+        display: inline;
+        font-weight: 600;
+        color: var(--text-head);
 
-    &::after {
-      content: ": ";
+        &::after {
+            content: ": ";
+        }
     }
-  }
 
-  dd {
-    display: inline;
-    margin: 0;
-    color: var(--text);
+    dd {
+        display: inline;
+        margin: 0;
+        color: var(--text);
 
-    &::after {
-      content: "";
-      display: block;
+        &::after {
+            content: "";
+            display: block;
+        }
     }
-  }
 }
 
 .spell-tooltip-body {
-  font-size: 0.78rem;
-  color: var(--text);
+    font-size: var(--font-tooltip-body);
+    line-height: var(--line-tooltip-body);
+    color: var(--text);
 
-  p {
-    margin: 0.3rem 0 0;
+    p {
+        margin: 0.3rem 0 0;
 
-    &:first-child {
-      margin-top: 0;
+        &:first-child {
+            margin-top: 0;
+        }
     }
-  }
 
-  strong {
-    color: var(--text-head);
-    font-weight: 600;
-  }
+    strong {
+        color: var(--text-head);
+        font-weight: 600;
+    }
 }

@@ -11,7 +11,7 @@ ytLinks:
 
 A Beast Master forms a mystical bond with a special animal, drawing on primal magic and a deep connection to the natural world.
 
-![Beast Master](images/ranger/beast-master.webp "left 45% | Alditha Siegar 95% 64%")
+![Beast Master](images/ranger/beast-master.webp "right 42% | Alditha Siegar 95% 64%")
 
 ## Level 3: Primal Companion
 

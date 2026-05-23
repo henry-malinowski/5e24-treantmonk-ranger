@@ -1,7 +1,15 @@
 export function createDiffViewController(modalEl, toggleEl) {
   const toggleInput = toggleEl.querySelector("#diff-toggle-input");
+  const SHOW_PHB_TEXT = "Show PHB 2024 text";
+  const HIDE_PHB_TEXT = "Hide PHB 2024 text";
 
   let currentSections = null;
+
+  function updateHint() {
+    const hint = toggleInput.checked ? HIDE_PHB_TEXT : SHOW_PHB_TEXT;
+    toggleEl.title = hint;
+    toggleEl.setAttribute("aria-label", hint);
+  }
 
   function hasDiffs() {
     return !!modalEl.querySelector(".diff-del, .diff-add");
@@ -76,6 +84,7 @@ export function createDiffViewController(modalEl, toggleEl) {
 
   function reset() {
     toggleInput.checked = false;
+    updateHint();
     if (currentSections) {
       gsap.killTweensOf(currentSections);
       gsap.set(currentSections, { clearProps: "all" });
@@ -86,12 +95,15 @@ export function createDiffViewController(modalEl, toggleEl) {
   }
 
   toggleInput.addEventListener("change", function () {
+    updateHint();
     if (toggleInput.checked) {
       reveal();
     } else {
       hide();
     }
   });
+
+  updateHint();
 
   return { reset: reset, hasDiffs: hasDiffs };
 }

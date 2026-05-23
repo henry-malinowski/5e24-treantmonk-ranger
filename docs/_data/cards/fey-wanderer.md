@@ -9,9 +9,9 @@ ytLinks:
     url: https://youtu.be/m6mKUPyeqPE
 ---
 
-A fey mystique surrounds you, thanks to the boon of an archfey or a location in the Feywild that transformed you. However you gained fey magic, you are now a Fey Wanderer. Your joyful laughter brightens the hearts of the downtrodden, and your martial prowess strikes terror in your foes, for great is the mirth of the fey and dreadful is their fury.
-
 ![Fey Wanderer](images/ranger/fey-wanderer.webp "right 30% | John Grello 3% 8%")
+
+A fey mystique surrounds you, thanks to the boon of an archfey or a location in the Feywild that transformed you. However you gained fey magic, you are now a Fey Wanderer. Your joyful laughter brightens the hearts of the downtrodden, and your martial prowess strikes terror in your foes, for great is the mirth of the fey and dreadful is their fury.
 
 ## Level 3: Dreadful Strikes
 

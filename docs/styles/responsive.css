@@ -1,37 +1,72 @@
 /* Responsive */
 @media (max-width: 900px) {
-  .modal-nav {
-    display: none;
-  }
+    .modal-nav {
+        display: none;
+    }
 }
 
 @media (max-width: 600px) {
-  main {
-    padding: 0 2rem 3rem;
-  }
-
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 2rem;
-    row-gap: 2rem;
-  }
-
-  .site-intro {
-    ul {
-      font-size: 0.78rem;
+    main {
+        padding: 0 2rem 3rem;
     }
-  }
 
-  .modal-description table {
-    width: 100%;
-  }
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
 
-  .modal-inner {
-    padding: 0.85rem 1.25rem 1.5rem;
-  }
+    .site-intro {
+        ul {
+            font-size: var(--font-ui-sm);
+        }
+    }
 
-  .modal-hero {
-    width: calc(100% + 2.5rem);
-    margin: 0 -1.25rem;
-  }
+    .modal-description table {
+        width: 100%;
+    }
+
+    .modal-inner {
+        padding: 0.85rem 1.25rem 1.5rem;
+    }
+
+    .modal-hero {
+        width: calc(100% + 2.5rem);
+        margin: 0 -1.25rem;
+    }
+
+    .spell-tooltip {
+        position: fixed;
+        top: 50%;
+        left: 1rem;
+        right: 1rem;
+        bottom: auto;
+        width: auto;
+        max-width: none;
+        min-width: 0;
+        max-height: min(70vh, 38rem);
+        overflow-y: auto;
+        pointer-events: auto;
+        animation: spellTooltipTrayIn 0.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-scrollbar) var(--color-scrollbar-track);
+
+        &.spell-tooltip--closing {
+            animation: spellTooltipTrayOut 0.14s ease-in both;
+            pointer-events: none;
+        }
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: var(--color-scrollbar-track);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: var(--color-scrollbar);
+            border-radius: 99px;
+        }
+    }
 }

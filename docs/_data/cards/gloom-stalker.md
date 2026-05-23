@@ -9,9 +9,9 @@ ytLinks:
     url: https://youtu.be/lUM2xobIEZc
 ---
 
-Gloom Stalkers are at home in the darkest places, wielding magic drawn from the Shadowfell to combat enemies that lurk in darkness.
-
 ![Gloom Stalker](images/ranger/gloom-stalker.webp "right 30% | Polar Engine 3% 11%")
+
+Gloom Stalkers are at home in the darkest places, wielding magic drawn from the Shadowfell to combat enemies that lurk in darkness.
 
 ## Level 3: Dread Ambusher
 

@@ -15,6 +15,7 @@ export function makeGDocGroup(googleDocsUrl) {
   link.rel = "noopener";
   link.className = "modal-icon-btn modal-icon-btn--gdoc";
   link.title = "Source Document";
+  link.setAttribute("aria-label", "Open source document");
   link.innerHTML = '<i class="fa-solid fa-file-lines"></i>';
   return link;
 }
@@ -29,6 +30,7 @@ export function makeYtGroup(ytLinks) {
     link.rel = "noopener";
     link.className = "modal-icon-btn modal-icon-btn--youtube";
     link.title = ytLinks[0].label;
+    link.setAttribute("aria-label", `Watch ${ytLinks[0].label} on YouTube`);
     link.innerHTML = '<i class="fa-brands fa-youtube"></i>';
     return link;
   }
@@ -39,6 +41,7 @@ export function makeYtGroup(ytLinks) {
   const btn = document.createElement("button");
   btn.className = "modal-icon-btn modal-icon-btn--youtube";
   btn.setAttribute("aria-expanded", "false");
+  btn.setAttribute("aria-label", "Show YouTube videos");
   btn.innerHTML = '<i class="fa-brands fa-youtube"></i>';
 
   const menu = document.createElement("div");
